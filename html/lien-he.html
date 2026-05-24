@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - TechPhone</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-form {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .contact-form h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+        }
+
+        .form-group button {
+            width: 100%;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .info-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .info-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        .info-content p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .info-content a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .info-content a:hover {
+            text-decoration: underline;
+        }
+
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+
+        .business-hours {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+
+        .business-hours h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .hours-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .hours-item {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form {
+                order: 2;
+            }
+
+            .contact-info {
+                order: 1;
+            }
+
+            .map-container iframe {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>TechPhone</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Trang chủ</a></li>
+                <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+                <li><a href="san-pham.html">Sản phẩm</a></li>
+                <li><a href="lien-he.html" class="active">Liên hệ</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 60px 20px; min-height: 300px;">
+        <div class="hero-content">
+            <h2>Liên hệ với chúng tôi</h2>
+            <p>Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section style="padding: 60px 20px; background-color: #f9f9f9;">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h3>Gửi tin nhắn cho chúng tôi</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Họ và tên:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Điện thoại:</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Chủ đề:</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Tin nhắn:</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Gửi tin nhắn</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-content">
+                            <h4>Địa chỉ</h4>
+                            <p>
+                                123 Đường Nguyễn Huệ<br>
+                                Quận 1, Thành phố Hồ Chí Minh<br>
+                                Việt Nam
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-content">
+                            <h4>Điện thoại</h4>
+                            <p>
+                                <a href="tel:+84283827999">+84 (28) 3827 9999</a><br>
+                                <a href="tel:+84912345678">+84 (91) 234 5678</a><br>
+                                Hỗ trợ: 7h - 22h (Thứ 2 - Chủ nhật)
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <p>
+                                <a href="mailto:info@techphone.com.vn">info@techphone.com.vn</a><br>
+                                <a href="mailto:support@techphone.com.vn">support@techphone.com.vn</a><br>
+                                <a href="mailto:sales@techphone.com.vn">sales@techphone.com.vn</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">🕐</div>
+                        <div class="info-content">
+                            <h4>Giờ làm việc</h4>
+                            <p>
+                                Thứ 2 - Thứ 6: 08:00 - 18:00<br>
+                                Thứ 7: 09:00 - 17:00<br>
+                                Chủ nhật: 09:00 - 15:00
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="business-hours">
+                        <h4>⭐ Đặc biệt</h4>
+                        <p>Nếu bạn cần hỗ trợ gấp, hãy gọi cho chúng tôi. Chúng tôi có dịch vụ hỗ trợ ngoài giờ cho các trường hợp khẩn cấp.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="map-container" style="margin-top: 3rem;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3808837127!2d106.68317761532393!3d10.776691892343138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f1c3f8e0d3b%3A0x8e8e8e8e8e8e8e8e!2sNguyen%20Hue%20Walking%20Street!5e0!3m2!1sen!2svn!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section style="padding: 60px 20px; background-color: white;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2rem; margin-bottom: 3rem;">Câu hỏi thường gặp</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div style="background-color: #f9f9f9; padding: 1.5rem; border-radius: 10px;">
+                    <h4 style="color: #667eea; margin-bottom: 0.5rem;">Giao hàng mất bao lâu?</h4>
+                    <p style="color: #666;">Giao hàng thường mất 1-2 ngày làm việc. Chúng tôi cung cấp miễn phí giao hàng cho toàn thành phố.</p>
+                </div>
+
+                <div style="background-color: #f9f9f9; padding: 1.5rem; border-radius: 10px;">
+                    <h4 style="color: #667eea; margin-bottom: 0.5rem;">Có bảo hành không?</h4>
+                    <p style="color: #666;">Có, tất cả sản phẩm đều có bảo hành 12 tháng từ nhà sản xuất và bảo hành mở rộng 24 tháng từ TechPhone.</p>
+                </div>
+
+                <div style="background-color: #f9f9f9; padding: 1.5rem; border-radius: 10px;">
+                    <h4 style="color: #667eea; margin-bottom: 0.5rem;">Có thể trả góp được không?</h4>
+                    <p style="color: #666;">Có, chúng tôi hỗ trợ trả góp 0% lên đến 12 tháng với các công ty tài chính uy tín.</p>
+                </div>
+
+                <div style="background-color: #f9f9f9; padding: 1.5rem; border-radius: 10px;">
+                    <h4 style="color: #667eea; margin-bottom: 0.5rem;">Chính sách đổi trả?</h4>
+                    <p style="color: #666;">Quý khách có thể đổi trả trong vòng 7 ngày nếu sản phẩm có lỗi từ nhà sản xuất.</p>
+                </div>
+
+                <div style="background-color: #f9f9f9; padding: 1.5rem; border-radius: 10px;">
+                    <h4 style="color: #667eea; margin-bottom: 0.5rem;">Sản phẩm có chính hãng không?</h4>
+                    <p style="color: #666;">100% sản phẩm chính hãng, được nhập khẩu trực tiếp từ nhà phân phối chính thức.</p>
+                </div>
+
+                <div style="background-color: #f9f9f9; padding: 1.5rem; border-radius: 10px;">
+                    <h4 style="color: #667eea; margin-bottom: 0.5rem;">Hỗ trợ sau mua hàng?</h4>
+                    <p style="color: #666;">Chúng tôi cung cấp hỗ trợ 24/7 qua điện thoại, email và chat. Đội ngũ hỗ trợ kỹ thuật sẵn sàng giúp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechPhone</h3>
+                    <p>Cửa hàng bán điện thoại di động chính hãng với giá tốt nhất thị trường.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="../index.html">Trang chủ</a></li>
+                        <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+                        <li><a href="san-pham.html">Sản phẩm</a></li>
+                        <li><a href="lien-he.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Thông tin liên hệ</h4>
+                    <p>Địa chỉ: 123 Đường Nguyễn Huệ, Q.1, TP.HCM</p>
+                    <p>Điện thoại: (028) 3827 9999</p>
+                    <p>Email: info@techphone.com.vn</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Mạng xã hội</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">Facebook</a>
+                        <a href="#" class="social-icon">Instagram</a>
+                        <a href="#" class="social-icon">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechPhone. Bản quyền được bảo vệ.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPhone - Cửa hàng bán điện thoại di động</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>TechPhone</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Trang chủ</a></li>
+                <li><a href="html/gioi-thieu.html">Giới thiệu</a></li>
+                <li><a href="html/san-pham.html">Sản phẩm</a></li>
+                <li><a href="html/lien-he.html">Liên hệ</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Chào mừng đến TechPhone</h2>
+            <p>Điện thoại chính hãng, giá tốt nhất thị trường</p>
+            <a href="html/san-pham.html" class="btn btn-primary">Mua ngay</a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2>Sản phẩm nổi bật</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="assets/images/iphone-15.jpg" alt="iPhone 15" onerror="this.src='https://via.placeholder.com/250x300?text=iPhone+15'">
+                    <h3>iPhone 15</h3>
+                    <p class="price">25.990.000 ₫</p>
+                    <p class="description">Chip A17 Pro, camera 48MP, màn hình Dynamic Island</p>
+                    <a href="html/chi-tiet.html?id=1" class="btn btn-secondary">Xem chi tiết</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="assets/images/samsung-s24.jpg" alt="Samsung S24" onerror="this.src='https://via.placeholder.com/250x300?text=Samsung+S24'">
+                    <h3>Samsung Galaxy S24</h3>
+                    <p class="price">22.490.000 ₫</p>
+                    <p class="description">Snapdragon 8 Gen 3, AI cạnh tranh, pin 4000mAh</p>
+                    <a href="html/chi-tiet.html?id=2" class="btn btn-secondary">Xem chi tiết</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="assets/images/xiaomi-13.jpg" alt="Xiaomi 13" onerror="this.src='https://via.placeholder.com/250x300?text=Xiaomi+13'">
+                    <h3>Xiaomi 13</h3>
+                    <p class="price">13.490.000 ₫</p>
+                    <p class="description">Snapdragon 8 Gen 2, camera Leica, sạc nhanh 120W</p>
+                    <a href="html/chi-tiet.html?id=3" class="btn btn-secondary">Xem chi tiết</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="assets/images/oppo-reno.jpg" alt="OPPO Reno" onerror="this.src='https://via.placeholder.com/250x300?text=OPPO+Reno'">
+                    <h3>OPPO Reno 8</h3>
+                    <p class="price">10.490.000 ₫</p>
+                    <p class="description">MediaTek Dimensity 7050, camera AI, thiết kế sang trọng</p>
+                    <a href="html/chi-tiet.html?id=4" class="btn btn-secondary">Xem chi tiết</a>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="html/san-pham.html" class="btn btn-primary">Xem tất cả sản phẩm</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2>Tại sao chọn TechPhone</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">📦</div>
+                    <h3>Giao hàng nhanh</h3>
+                    <p>Giao hàng miễn phí toàn thành phố, 24-48 giờ</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <h3>Chính hãng 100%</h3>
+                    <p>Toàn bộ sản phẩm chính hãng, có bảo hành</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💰</div>
+                    <h3>Giá cạnh tranh</h3>
+                    <p>Giá tốt nhất thị trường, không có giá nào rẻ hơn</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Hỗ trợ 24/7</h3>
+                    <p>Đội ngũ hỗ trợ khách hàng luôn sẵn sàng</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Đăng ký nhận thông tin</h2>
+            <p>Nhận thông tin về các sản phẩm mới và khuyến mãi hấp dẫn</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Nhập email của bạn" required>
+                <button type="submit" class="btn btn-primary">Đăng ký</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechPhone</h3>
+                    <p>Cửa hàng bán điện thoại di động chính hãng với giá tốt nhất thị trường.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="html/gioi-thieu.html">Giới thiệu</a></li>
+                        <li><a href="html/san-pham.html">Sản phẩm</a></li>
+                        <li><a href="html/lien-he.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Thông tin liên hệ</h4>
+                    <p>Địa chỉ: 123 Đường Nguyễn Huệ, Q.1, TP.HCM</p>
+                    <p>Điện thoại: (028) 3827 9999</p>
+                    <p>Email: info@techphone.com.vn</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Mạng xã hội</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">Facebook</a>
+                        <a href="#" class="social-icon">Instagram</a>
+                        <a href="#" class="social-icon">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechPhone. Bản quyền được bảo vệ.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

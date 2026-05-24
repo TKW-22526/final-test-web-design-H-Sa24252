@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm - TechPhone</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .filters {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .filter-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .filter-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        .filter-group select,
+        .filter-group input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .filter-group select:focus,
+        .filter-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+        }
+
+        .products-section {
+            padding: 40px 20px;
+        }
+
+        .sort-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .no-products {
+            text-align: center;
+            padding: 3rem;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            color: #666;
+        }
+    </style>
+</head>
+<body class="products-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>TechPhone</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Trang chủ</a></li>
+                <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+                <li><a href="san-pham.html" class="active">Sản phẩm</a></li>
+                <li><a href="lien-he.html">Liên hệ</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 60px 20px; min-height: 300px;">
+        <div class="hero-content">
+            <h2>Kho sản phẩm đầy đủ</h2>
+            <p>Các điện thoại mới nhất từ các thương hiệu hàng đầu</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="products-section">
+        <div class="container">
+            <!-- Filters -->
+            <div class="filters">
+                <h3 style="margin-bottom: 1.5rem;">Bộ lọc sản phẩm</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                    <div class="filter-group">
+                        <label for="searchInput">Tìm kiếm:</label>
+                        <input type="text" id="searchInput" placeholder="Nhập tên sản phẩm...">
+                    </div>
+                    <div class="filter-group">
+                        <label for="categoryFilter">Danh mục:</label>
+                        <select id="categoryFilter">
+                            <option value="">Tất cả</option>
+                            <option value="apple">Apple</option>
+                            <option value="samsung">Samsung</option>
+                            <option value="xiaomi">Xiaomi</option>
+                            <option value="oppo">OPPO</option>
+                            <option value="other">Khác</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="priceFilter">Giá tối đa:</label>
+                        <select id="priceFilter">
+                            <option value="999999999">Tất cả giá</option>
+                            <option value="10000000">Dưới 10 triệu</option>
+                            <option value="15000000">Dưới 15 triệu</option>
+                            <option value="20000000">Dưới 20 triệu</option>
+                            <option value="30000000">Dưới 30 triệu</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid">
+                <!-- Apple Products -->
+                <div class="product-card" data-category="apple">
+                    <img src="../assets/images/iphone-15-pro.jpg" alt="iPhone 15 Pro" onerror="this.src='https://via.placeholder.com/250x300?text=iPhone+15+Pro'">
+                    <h3>iPhone 15 Pro Max</h3>
+                    <p class="price">30.490.000 ₫</p>
+                    <p class="description">Chip A17 Pro, camera 48MP, màn hình 6.7 inch, titanium</p>
+                    <button class="btn btn-secondary" onclick="addToCart('iphone15pro', 'iPhone 15 Pro Max', '30.490.000 ₫')">Thêm vào giỏ</button>
+                </div>
+
+                <div class="product-card" data-category="apple">
+                    <img src="../assets/images/iphone-15.jpg" alt="iPhone 15" onerror="this.src='https://via.placeholder.com/250x300?text=iPhone+15'">
+                    <h3>iPhone 15</h3>
+                    <p class="price">25.990.000 ₫</p>
+                    <p class="description">Chip A17 Pro, camera 48MP, màn hình Dynamic Island</p>
+                    <button class="btn btn-secondary" onclick="addToCart('iphone15', 'iPhone 15', '25.990.000 ₫')">Thêm vào giỏ</button>
+                </div>
+
+                <div class="product-card" data-category="apple">
+                    <img src="../assets/images/iphone-14.jpg" alt="iPhone 14" onerror="this.src='https://via.placeholder.com/250x300?text=iPhone+14'">
+                    <h3>iPhone 14</h3>
+                    <p class="price">19.490.000 ₫</p>
+                    <p class="description">Chip A16 Bionic, camera kép 12MP, màn hình 6.1 inch</p>
+                    <button class="btn btn-secondary" onclick="addToCart('iphone14', 'iPhone 14', '19.490.000 ₫')">Thêm vào giỏ</button>
+                </div>
+
+                <!-- Samsung Products -->
+                <div class="product-card" data-category="samsung">
+                    <img src="../assets/images/samsung-s24-ultra.jpg" alt="Samsung S24 Ultra" onerror="this.src='https://via.placeholder.com/250x300?text=Samsung+S24+Ultra'">
+                    <h3>Samsung Galaxy S24 Ultra</h3>
+                    <p class="price">28.990.000 ₫</p>
+                    <p class="description">Snapdragon 8 Gen 3, camera 200MP, bút S Pen tích hợp</p>
+                    <button class="btn btn-secondary" onclick="addToCart('s24ultra', 'Samsung Galaxy S24 Ultra', '28.990.000 ₫')">Thêm vào giỏ</button>
+                </div>
+
+                <div class="product-card" data-category="samsung">
+                    <img src="../assets/images/samsung-s24.jpg" alt="Samsung S24" onerror="this.src='https://via.placeholder.com/250x300?text=Samsung+S24'">
+                    <h3>Samsung Galaxy S24</h3>
+                    <p class="price">22.490.000 ₫</p>
+                    <p class="description">Snapdragon 8 Gen 3, AI cạnh tranh, pin 4000mAh</p>
+                    <button class="btn btn-secondary" onclick="addToCart('s24', 'Samsung Galaxy S24', '22.490.000 ₫')">Thêm vào giỏ</button>
+                </div>
+
+                <div class="product-card" data-category="samsung">
+                    <img src="../assets/images/samsung-a50.jpg" alt="Samsung A50" onerror="this.src='https://via.placeholder.com/250x300?text=Samsung+A50'">
+                    <h3>Samsung Galaxy A50</h3>
+                    <p class="price">8.990.000 ₫</p>
+                    <p class="description">Exynos 9610, camera 48MP, pin 4000mAh, giá phổ thông</p>
+                    <button class="btn btn-secondary" onclick="addToCart('a50', 'Samsung Galaxy A50', '8.990.000 ₫')">Thêm vào giỏ</button>
+                </div>
+
+                <!-- Xiaomi Products -->
+                <div class="product-card" data-category="xiaomi">
+                    <img src="../assets/images/xiaomi-14-ultra.jpg" alt="Xiaomi 14 Ultra" onerror="this.src='https://via.placeholder.com/250x300?text=Xiaomi+14+Ultra'">
+                    <h3>Xiaomi 14 Ultra</h3>
+                    <p class="price">24.990.000 ₫</p>
+                    <p class="description">Snapdragon 8 Gen 3, camera Leica 50MP, sạc 90W</p>
+                    <button class="btn btn-secondary" onclick="addToCart('xiaomi14ultra', 'Xiaomi 14 Ultra', '24.990.000 ₫')">Thêm vào giỏ</button>
+                </div>
+
+                <div class="product-card" data-category="xiaomi">
+                    <img src="../assets/images/xiaomi-13.jpg" alt="Xiaomi 13" onerror="this.src='https://via.placeholder.com/250x300?text=Xiaomi+13'">
+                    <h3>Xiaomi 13</h3>
+                    <p class="price">13.490.000 ₫</p>
+                    <p class="description">Snapdragon 8 Gen 2, camera Leica, sạc nhanh 120W</p>
+                    <button class="btn btn-secondary" onclick="addToCart('xiaomi13', 'Xiaomi 13', '13.490.000 ₫')">Thêm vào giỏ</button>
+                </div>
+
+                <div class="product-card" data-category="xiaomi">
+                    <img src="../assets/images/xiaomi-redmi.jpg" alt="Xiaomi Redmi Note" onerror="this.src='https://via.placeholder.com/250x300?text=Xiaomi+Redmi+Note'">
+                    <h3>Xiaomi Redmi Note 12</h3>
+                    <p class="price">7.490.000 ₫</p>
+                    <p class="description">MediaTek Helio G88, camera 50MP, pin 5000mAh</p>
+                    <button class="btn btn-secondary" onclick="addToCart('redmi12', 'Xiaomi Redmi Note 12', '7.490.000 ₫')">Thêm vào giỏ</button>
+                </div>
+
+                <!-- OPPO Products -->
+                <div class="product-card" data-category="oppo">
+                    <img src="../assets/images/oppo-find-x7.jpg" alt="OPPO Find X7" onerror="this.src='https://via.placeholder.com/250x300?text=OPPO+Find+X7'">
+                    <h3>OPPO Find X7</h3>
+                    <p class="price">18.990.000 ₫</p>
+                    <p class="description">Snapdragon 8 Gen 3, camera 50MP, sạc nhanh 100W</p>
+                    <button class="btn btn-secondary" onclick="addToCart('oppofindx7', 'OPPO Find X7', '18.990.000 ₫')">Thêm vào giỏ</button>
+                </div>
+
+                <div class="product-card" data-category="oppo">
+                    <img src="../assets/images/oppo-reno.jpg" alt="OPPO Reno" onerror="this.src='https://via.placeholder.com/250x300?text=OPPO+Reno'">
+                    <h3>OPPO Reno 8</h3>
+                    <p class="price">10.490.000 ₫</p>
+                    <p class="description">MediaTek Dimensity 7050, camera AI, thiết kế sang trọng</p>
+                    <button class="btn btn-secondary" onclick="addToCart('oppireno8', 'OPPO Reno 8', '10.490.000 ₫')">Thêm vào giỏ</button>
+                </div>
+
+                <div class="product-card" data-category="oppo">
+                    <img src="../assets/images/oppo-a76.jpg" alt="OPPO A76" onerror="this.src='https://via.placeholder.com/250x300?text=OPPO+A76'">
+                    <h3>OPPO A76</h3>
+                    <p class="price">5.990.000 ₫</p>
+                    <p class="description">Snapdragon 680, camera 13MP, pin 5000mAh giá rẻ</p>
+                    <button class="btn btn-secondary" onclick="addToCart('oppoa76', 'OPPO A76', '5.990.000 ₫')">Thêm vào giỏ</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechPhone</h3>
+                    <p>Cửa hàng bán điện thoại di động chính hãng với giá tốt nhất thị trường.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="../index.html">Trang chủ</a></li>
+                        <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+                        <li><a href="san-pham.html">Sản phẩm</a></li>
+                        <li><a href="lien-he.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Thông tin liên hệ</h4>
+                    <p>Địa chỉ: 123 Đường Nguyễn Huệ, Q.1, TP.HCM</p>
+                    <p>Điện thoại: (028) 3827 9999</p>
+                    <p>Email: info@techphone.com.vn</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Mạng xã hội</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">Facebook</a>
+                        <a href="#" class="social-icon">Instagram</a>
+                        <a href="#" class="social-icon">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechPhone. Bản quyền được bảo vệ.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
