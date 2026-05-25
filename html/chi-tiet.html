@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi tiết sản phẩm - TechPhone</title>
+    <title>Chi tiết sản phẩm - THSPhone</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
         .product-detail {
@@ -159,7 +159,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <h1>TechPhone</h1>
+                <h1>THSPhone</h1>
             </div>
             <ul class="nav-menu">
                 <li><a href="../index.html">Trang chủ</a></li>
@@ -181,7 +181,7 @@
             <div class="product-detail-container">
                 <!-- Product Image -->
                 <div class="product-image">
-                    <img id="productImage" src="https://via.placeholder.com/400x500?text=iPhone+15" alt="Sản phẩm">
+                    <img id="productImage" src="../assets/images/iphone-15.jpg" alt="Sản phẩm">
                 </div>
 
                 <!-- Product Info -->
@@ -287,35 +287,35 @@
             <h2>Sản phẩm liên quan</h2>
             <div class="products-grid">
                 <div class="product-card">
-                    <img src="https://via.placeholder.com/250x300?text=iPhone+15+Pro" alt="iPhone 15 Pro">
+                    <img src="../assets/images/iphone-15-pro.jpg" alt="iPhone 15 Pro" onerror="this.src='https://via.placeholder.com/250x300?text=iPhone+15+Pro'">
                     <h3>iPhone 15 Pro</h3>
                     <p class="price">28.990.000 ₫</p>
-                    <p class="description">Chip A17 Pro, camera 48MP+12MP+12MP</p>
-                    <a href="chi-tiet.html" class="btn btn-secondary">Xem chi tiết</a>
+                    <p class="description">Chip A17 Pro, camera 48MP + 12MP + 12MP</p>
+                    <a href="chi-tiet.html?id=iphone15pro" class="btn btn-secondary">Xem chi tiết</a>
                 </div>
 
                 <div class="product-card">
-                    <img src="https://via.placeholder.com/250x300?text=iPhone+14" alt="iPhone 14">
+                    <img src="../assets/images/iphone-14.jpg" alt="iPhone 14" onerror="this.src='https://via.placeholder.com/250x300?text=iPhone+14'">
                     <h3>iPhone 14</h3>
                     <p class="price">19.490.000 ₫</p>
                     <p class="description">Chip A16 Bionic, camera kép 12MP</p>
-                    <a href="chi-tiet.html" class="btn btn-secondary">Xem chi tiết</a>
+                    <a href="chi-tiet.html?id=iphone14" class="btn btn-secondary">Xem chi tiết</a>
                 </div>
 
                 <div class="product-card">
-                    <img src="https://via.placeholder.com/250x300?text=Samsung+S24" alt="Samsung S24">
+                    <img src="../assets/images/samsung-s24.jpg" alt="Samsung S24" onerror="this.src='https://via.placeholder.com/250x300?text=Samsung+S24'">
                     <h3>Samsung Galaxy S24</h3>
                     <p class="price">22.490.000 ₫</p>
                     <p class="description">Snapdragon 8 Gen 3, AI cạnh tranh</p>
-                    <a href="chi-tiet.html" class="btn btn-secondary">Xem chi tiết</a>
+                    <a href="chi-tiet.html?id=s24" class="btn btn-secondary">Xem chi tiết</a>
                 </div>
 
                 <div class="product-card">
-                    <img src="https://via.placeholder.com/250x300?text=Xiaomi+14" alt="Xiaomi 14">
-                    <h3>Xiaomi 14</h3>
-                    <p class="price">18.990.000 ₫</p>
+                    <img src="../assets/images/xiaomi-14-ultra.jpg" alt="Xiaomi 14 Ultra" onerror="this.src='https://via.placeholder.com/250x300?text=Xiaomi+14+Ultra'">
+                    <h3>Xiaomi 14 Ultra</h3>
+                    <p class="price">24.990.000 ₫</p>
                     <p class="description">Snapdragon 8 Gen 3, camera Leica 50MP</p>
-                    <a href="chi-tiet.html" class="btn btn-secondary">Xem chi tiết</a>
+                    <a href="chi-tiet.html?id=xiaomi14ultra" class="btn btn-secondary">Xem chi tiết</a>
                 </div>
             </div>
         </div>
@@ -326,7 +326,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>TechPhone</h3>
+                    <h3>THSPhone</h3>
                     <p>Cửa hàng bán điện thoại di động chính hãng với giá tốt nhất thị trường.</p>
                 </div>
                 <div class="footer-section">
@@ -354,13 +354,220 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 TechPhone. Bản quyền được bảo vệ.</p>
+                <p>&copy; 2024 THSPhone. Bản quyền được bảo vệ.</p>
             </div>
         </div>
     </footer>
 
     <script src="../js/script.js"></script>
     <script>
+        const productCatalog = {
+            iphone15pro: {
+                name: 'iPhone 15 Pro Max',
+                image: '../assets/images/iphone-15-pro.jpg',
+                price: '30.490.000 ₫',
+                description: 'iPhone 15 Pro Max sở hữu chip A17 Pro, camera 48MP, màn hình 6.7 inch và thân titanium sang trọng.',
+                specs: {
+                    chip: 'Apple A17 Pro',
+                    ram: '8GB',
+                    storage: '256GB',
+                    screen: '6.7 inch OLED',
+                    camera: '48MP + 12MP + 12MP',
+                    battery: '4422mAh',
+                    os: 'iOS 17'
+                }
+            },
+            iphone15: {
+                name: 'iPhone 15',
+                image: '../assets/images/iphone-15.jpg',
+                price: '25.990.000 ₫',
+                description: 'iPhone 15 nổi bật với chip A17 Pro, camera 48MP và màn hình Dynamic Island mượt mà.',
+                specs: {
+                    chip: 'Apple A17 Pro',
+                    ram: '8GB',
+                    storage: '128GB',
+                    screen: '6.1 inch OLED',
+                    camera: '48MP + 12MP',
+                    battery: '3349mAh',
+                    os: 'iOS 17'
+                }
+            },
+            iphone14: {
+                name: 'iPhone 14',
+                image: '../assets/images/iphone-14.jpg',
+                price: '19.490.000 ₫',
+                description: 'iPhone 14 có chip A16 Bionic, camera kép 12MP và thiết kế nhỏ gọn tiện lợi.',
+                specs: {
+                    chip: 'Apple A16 Bionic',
+                    ram: '6GB',
+                    storage: '128GB',
+                    screen: '6.1 inch OLED',
+                    camera: '12MP + 12MP',
+                    battery: '3279mAh',
+                    os: 'iOS 16'
+                }
+            },
+            s24ultra: {
+                name: 'Samsung Galaxy S24 Ultra',
+                image: '../assets/images/samsung-s24-ultra.jpg',
+                price: '28.990.000 ₫',
+                description: 'Samsung S24 Ultra mang đến camera 200MP, bút S Pen tích hợp và sức mạnh Snapdragon 8 Gen 3.',
+                specs: {
+                    chip: 'Snapdragon 8 Gen 3',
+                    ram: '12GB',
+                    storage: '256GB',
+                    screen: '6.8 inch Dynamic AMOLED',
+                    camera: '200MP + 12MP + 10MP + 10MP',
+                    battery: '5000mAh',
+                    os: 'Android 14'
+                }
+            },
+            s24: {
+                name: 'Samsung Galaxy S24',
+                image: '../assets/images/samsung-s24.jpg',
+                price: '22.490.000 ₫',
+                description: 'Samsung Galaxy S24 có hiệu năng mạnh, camera AI và màn hình đẹp cho trải nghiệm cao cấp.',
+                specs: {
+                    chip: 'Snapdragon 8 Gen 3',
+                    ram: '12GB',
+                    storage: '256GB',
+                    screen: '6.2 inch Dynamic AMOLED',
+                    camera: '50MP + 12MP + 10MP',
+                    battery: '4000mAh',
+                    os: 'Android 14'
+                }
+            },
+            a50: {
+                name: 'Samsung Galaxy A50',
+                image: '../assets/images/samsung-a50.jpg',
+                price: '8.990.000 ₫',
+                description: 'Galaxy A50 là lựa chọn giá tốt với pin lâu, camera 48MP và hiệu năng ổn định.',
+                specs: {
+                    chip: 'Exynos 9610',
+                    ram: '4GB',
+                    storage: '128GB',
+                    screen: '6.4 inch Super AMOLED',
+                    camera: '48MP + 8MP + 5MP',
+                    battery: '4000mAh',
+                    os: 'Android 12'
+                }
+            },
+            xiaomi14ultra: {
+                name: 'Xiaomi 14 Ultra',
+                image: '../assets/images/xiaomi-14-ultra.jpg',
+                price: '24.990.000 ₫',
+                description: 'Xiaomi 14 Ultra có camera Leica 50MP, sạc 90W và hiệu năng mạnh mẽ.',
+                specs: {
+                    chip: 'Snapdragon 8 Gen 3',
+                    ram: '12GB',
+                    storage: '256GB',
+                    screen: '6.73 inch AMOLED',
+                    camera: '50MP + 50MP + 50MP',
+                    battery: '5200mAh',
+                    os: 'Android 14'
+                }
+            },
+            xiaomi13: {
+                name: 'Xiaomi 13',
+                image: '../assets/images/xiaomi-13.jpg',
+                price: '13.490.000 ₫',
+                description: 'Xiaomi 13 nổi bật với camera Leica, hiệu năng cao và sạc nhanh 120W.',
+                specs: {
+                    chip: 'Snapdragon 8 Gen 2',
+                    ram: '8GB',
+                    storage: '256GB',
+                    screen: '6.36 inch AMOLED',
+                    camera: '50MP + 13MP + 10MP',
+                    battery: '4500mAh',
+                    os: 'Android 13'
+                }
+            },
+            redmi12: {
+                name: 'Xiaomi Redmi Note 12',
+                image: '../assets/images/xiaomi-redmi.jpg',
+                price: '7.490.000 ₫',
+                description: 'Redmi Note 12 là smartphone giá mềm với pin 5000mAh và camera 50MP.',
+                specs: {
+                    chip: 'MediaTek Helio G88',
+                    ram: '6GB',
+                    storage: '128GB',
+                    screen: '6.67 inch AMOLED',
+                    camera: '50MP + 8MP + 2MP',
+                    battery: '5000mAh',
+                    os: 'Android 13'
+                }
+            },
+            oppofindx7: {
+                name: 'OPPO Find X7',
+                image: '../assets/images/oppo-find-x7.jpg',
+                price: '18.990.000 ₫',
+                description: 'OPPO Find X7 trang bị camera 50MP, chip Snapdragon thế hệ mới và thiết kế cao cấp.',
+                specs: {
+                    chip: 'Snapdragon 8 Gen 3',
+                    ram: '12GB',
+                    storage: '256GB',
+                    screen: '6.7 inch AMOLED',
+                    camera: '50MP + 50MP + 50MP',
+                    battery: '5000mAh',
+                    os: 'Android 14'
+                }
+            },
+            oppireno8: {
+                name: 'OPPO Reno 8',
+                image: '../assets/images/oppo-reno.jpg',
+                price: '10.490.000 ₫',
+                description: 'OPPO Reno 8 có thiết kế mỏng nhẹ, camera AI và sạc nhanh 80W.',
+                specs: {
+                    chip: 'MediaTek Dimensity 7050',
+                    ram: '8GB',
+                    storage: '256GB',
+                    screen: '6.43 inch AMOLED',
+                    camera: '50MP + 8MP + 2MP',
+                    battery: '4500mAh',
+                    os: 'Android 13'
+                }
+            },
+            oppoa76: {
+                name: 'OPPO A76',
+                image: '../assets/images/oppo-a76.jpg',
+                price: '5.990.000 ₫',
+                description: 'OPPO A76 là lựa chọn thân thiện với ngân sách, pin 5000mAh và camera 13MP.',
+                specs: {
+                    chip: 'Snapdragon 680',
+                    ram: '6GB',
+                    storage: '128GB',
+                    screen: '6.56 inch IPS LCD',
+                    camera: '13MP + 2MP',
+                    battery: '5000mAh',
+                    os: 'Android 12'
+                }
+            }
+        };
+
+        function getProductIdFromQuery() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('id') || 'iphone15';
+        }
+
+        function setProductDetails() {
+            const productId = getProductIdFromQuery();
+            const product = productCatalog[productId] || productCatalog['iphone15'];
+
+            document.title = product.name + ' - Chi tiết sản phẩm';
+            document.getElementById('productName').textContent = product.name;
+            document.getElementById('productImage').src = product.image;
+            document.getElementById('productImage').alt = product.name;
+            document.getElementById('productPrice').textContent = product.price;
+            document.getElementById('productDescription').textContent = product.description;
+            document.getElementById('specChip').textContent = product.specs.chip;
+            document.getElementById('specRam').textContent = product.specs.ram;
+            document.getElementById('specStorage').textContent = product.specs.storage;
+            document.getElementById('specScreen').textContent = product.specs.screen;
+            document.getElementById('specCamera').textContent = product.specs.camera;
+            document.getElementById('specBattery').textContent = product.specs.battery;
+            document.getElementById('specOS').textContent = product.specs.os;
+        }
+
         function addToCart() {
             const quantity = document.getElementById('quantity').value;
             const productName = document.getElementById('productName').textContent;
@@ -372,6 +579,8 @@
             const productName = document.getElementById('productName').textContent;
             alert('Tiến hành thanh toán cho ' + quantity + ' ' + productName + '!');
         }
+
+        document.addEventListener('DOMContentLoaded', setProductDetails);
     </script>
 </body>
 </html>
