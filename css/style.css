@@ -38,7 +38,20 @@ body {
     align-items: center;
 }
 
-.logo h1 {
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.logo span {
     color: #00d4ff;
     font-size: 1.8rem;
     font-weight: bold;
@@ -153,13 +166,55 @@ body {
 }
 
 .btn-secondary {
-    background-color: #764ba2;
+    background-color: #007bff;
     color: white;
 }
 
 .btn-secondary:hover {
-    background-color: #5a3682;
+    background-color: #0056cc;
     transform: translateY(-3px);
+}
+
+.product-card .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    min-width: 0;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.product-card-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column; /* stack vertically */
+    justify-content: center;
+    align-items: center; /* center buttons horizontally */
+    width: 100%;
+    margin-top: 0.75rem;
+}
+
+.product-card-buttons .btn {
+    flex: none;
+    width: 92%; /* near full width but with side padding */
+    max-width: 420px;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 480px) {
+    .product-card .btn {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+        width: 100%;
+    }
+    .product-card-buttons {
+        gap: 0.5rem;
+    }
 }
 
 /* Featured Products Section */
@@ -460,7 +515,7 @@ body {
 }
 
 @media (max-width: 480px) {
-    .logo h1 {
+    .logo span {
         font-size: 1.3rem;
     }
 
