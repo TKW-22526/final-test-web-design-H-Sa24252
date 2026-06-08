@@ -179,6 +179,6 @@ Họ và tên:Thạch Hoàng Sa
 Mã số sinh viên:110124252
 Lớp:DA24TTC
 Tên đề tài:THSPHONE-CỬA HÀNG SMART PHONE ONLINE
-Liên kết GitHub repository:
-Liên kết GitHub Pages:
+Liên kết GitHub repository:https://github.com/TKW-22526/final-test-web-design-H-Sa24252.git
+Liên kết GitHub Pages:https://tkw-22526.github.io/final-test-web-design-H-sa24252/
 ```
