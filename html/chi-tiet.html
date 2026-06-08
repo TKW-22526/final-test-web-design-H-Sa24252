@@ -4,328 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chi tiết sản phẩm - THSPhone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/chi-tiet.css">
     <link rel="icon" href="../assets/logo.jpg" type="image/jpeg">
-    <style>
-        .product-detail {
-            padding: 40px 20px;
-        }
-
-        .product-detail-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: start;
-        }
-
-        .product-image {
-            text-align: center;
-        }
-
-        .product-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-
-        .product-info h2 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-            color: #1a1a1a;
-        }
-
-        .rating {
-            color: #ffc107;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-
-        .price {
-            font-size: 2rem;
-            color: #00d4ff;
-            font-weight: bold;
-            margin: 1rem 0;
-        }
-
-        .description-full {
-            color: #666;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-
-        .specifications {
-            background-color: #f9f9f9;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin-bottom: 2rem;
-        }
-
-        .specifications h3 {
-            margin-bottom: 1rem;
-            color: #1a1a1a;
-        }
-
-        .spec-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        .spec-item:last-child {
-            border-bottom: none;
-        }
-
-        .spec-label {
-            font-weight: 600;
-            color: #1a1a1a;
-        }
-
-        .spec-value {
-            color: #667eea;
-        }
-
-        .quantity-selector {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .quantity-selector label {
-            font-weight: 600;
-        }
-
-        .quantity-selector input {
-            width: 80px;
-            padding: 0.5rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            text-align: center;
-            font-size: 1rem;
-        }
-
-        .action-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-bottom: 2rem;
-        }
-
-        .btn-large {
-            flex: 1;
-            min-width: 150px;
-            padding: 15px;
-            font-size: 1.1rem;
-        }
-
-        .related-products {
-            padding: 60px 20px;
-            background-color: #f9f9f9;
-        }
-
-        .related-products h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            .product-detail-container {
-                grid-template-columns: 1fr;
-            }
-
-            .product-info h2 {
-                font-size: 1.5rem;
-            }
-
-            .price {
-                font-size: 1.5rem;
-            }
-
-            .action-buttons {
-                flex-direction: column;
-            }
-
-            .btn-large {
-                min-width: auto;
-                width: 100%;
-            }
-        }
-    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Điều hướng -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <div class="logo">
-                <a href="../index.html">
-                    <img src="../assets/logo.jpg" alt="THSPHONE Logo">
-                    <span>THSPHONE</span>
-                </a>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="../index.html">Trang chủ</a></li>
-                <li><a href="gioi-thieu.html">Giới thiệu</a></li>
-                <li><a href="san-pham.html">Sản phẩm</a></li>
-                <li><a href="lien-he.html">Liên hệ</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../assets/logo.jpg" alt="THSPHONE Logo" height="40">
+                <span class="ms-2">THSPHONE</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gioi-thieu.html">Giới thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="san-pham.html">Sản phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gio-hang.html">Giỏ hàng <span id="cartCountBadge" class="badge bg-info ms-1">0</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="lien-he.html">Liên hệ</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Product Detail Section -->
-    <section class="product-detail">
+    <div class="history-control">
+        <button type="button" class="btn btn-outline-light btn-sm" onclick="window.history.back()" title="Quay lại">←</button>
+        <button type="button" class="btn btn-outline-light btn-sm" onclick="window.history.forward()" title="Tiếp theo">→</button>
+    </div>
+
+    <!-- Phần chi tiết sản phẩm -->
+    <section class="product-detail py-5">
         <div class="container">
-            <div class="product-detail-container">
-                <!-- Product Image -->
-                <div class="product-image">
-                    <img id="productImage" src="../assets/images/iphone-15.jpg" alt="Sản phẩm">
+            <div class="row gx-5 gy-4 align-items-start">
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm overflow-hidden">
+                        <img id="productImage" src="../assets/images/iphone-15.jpg" class="card-img-top" alt="Sản phẩm">
+                    </div>
                 </div>
 
-                <!-- Product Info -->
-                <div class="product-info">
-                    <h2 id="productName">iPhone 15</h2>
-                    <div class="rating">★★★★★ (256 đánh giá)</div>
-                    <div class="price" id="productPrice">25.990.000 ₫</div>
+                <div class="col-lg-6">
+                    <div class="product-info">
+                        <h2 id="productName" class="fw-bold mb-3">iPhone 15</h2>
+                        <div class="price fs-2 fw-bold text-primary mb-4" id="productPrice">25.990.000 ₫</div>
 
-                    <p class="description-full" id="productDescription">
-                        iPhone 15 là chiếc iPhone mới nhất với thiết kế tiên tiến, hiệu năng mạnh mẽ và tính năng camera tuyệt vời. 
-                        Được trang bị chip A17 Pro, camera 48MP với Dynamic Island.
-                    </p>
+                        <p class="description-full text-muted mb-4" id="productDescription">
+                            iPhone 15 là chiếc iPhone mới nhất với thiết kế tiên tiến, hiệu năng mạnh mẽ và tính năng camera tuyệt vời.
+                            Được trang bị chip A17 Pro, camera 48MP với Dynamic Island.
+                        </p>
 
-                    <!-- Specifications -->
-                    <div class="specifications">
-                        <h3>Thông số kỹ thuật</h3>
-                        <div class="spec-item">
-                            <span class="spec-label">Chip xử lý:</span>
-                            <span class="spec-value" id="specChip">Apple A17 Pro</span>
+                        <div class="specifications card bg-light border-0 mb-4">
+                            <div class="card-body">
+                                <h3 class="h5 text-dark mb-3">Thông số kỹ thuật</h3>
+                                <div class="row gx-3 gy-2">
+                                    <div class="col-6">
+                                        <div class="d-flex justify-content-between border-bottom pb-2">
+                                            <span class="fw-semibold">Chip xử lý:</span>
+                                            <span class="text-primary" id="specChip">Apple A17 Pro</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="d-flex justify-content-between border-bottom pb-2">
+                                            <span class="fw-semibold">RAM:</span>
+                                            <span class="text-primary" id="specRam">8GB</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="d-flex justify-content-between border-bottom pb-2">
+                                            <span class="fw-semibold">Dung lượng:</span>
+                                            <span class="text-primary" id="specStorage">128GB</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="d-flex justify-content-between border-bottom pb-2">
+                                            <span class="fw-semibold">Màn hình:</span>
+                                            <span class="text-primary" id="specScreen">6.1 inch OLED</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="d-flex justify-content-between border-bottom pb-2">
+                                            <span class="fw-semibold">Camera sau:</span>
+                                            <span class="text-primary" id="specCamera">48MP + 12MP</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="d-flex justify-content-between border-bottom pb-2">
+                                            <span class="fw-semibold">Pin:</span>
+                                            <span class="text-primary" id="specBattery">3349mAh</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="d-flex justify-content-between pt-2">
+                                            <span class="fw-semibold">Hệ điều hành:</span>
+                                            <span class="text-primary" id="specOS">iOS 17</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Ram:</span>
-                            <span class="spec-value" id="specRam">8GB</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Dung lượng:</span>
-                            <span class="spec-value" id="specStorage">128GB</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Màn hình:</span>
-                            <span class="spec-value" id="specScreen">6.1 inch OLED</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Camera sau:</span>
-                            <span class="spec-value" id="specCamera">48MP + 12MP</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Pin:</span>
-                            <span class="spec-value" id="specBattery">3349mAh</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Hệ điều hành:</span>
-                            <span class="spec-value" id="specOS">iOS 17</span>
-                        </div>
-                    </div>
 
-                    <!-- Quantity Selector -->
-                    <div class="quantity-selector">
-                        <label for="quantity">Số lượng:</label>
-                        <input type="number" id="quantity" min="1" max="10" value="1">
-                    </div>
-
-                    <!-- Action Buttons -->
-                    <div class="action-buttons">
-                        <button class="btn btn-primary btn-large" onclick="buyNow()">Mua ngay</button>
-                        <button class="btn btn-secondary btn-large" onclick="addToCart()">Thêm vào giỏ</button>
-                    </div>
-
-                    <!-- Additional Info -->
-                    <div style="background-color: #f0f0f0; padding: 1rem; border-radius: 5px; font-size: 0.9rem;">
-                        <p>✓ Sản phẩm chính hãng 100%, bảo hành 12 tháng</p>
-                        <p>✓ Giao hàng miễn phí toàn thành phố</p>
-                        <p>✓ Hỗ trợ trả góp 0% lên đến 12 tháng</p>
+                        <div class="row g-3 align-items-end mb-4">
+                            <div class="col-sm-5">
+                                <label for="quantity" class="form-label fw-semibold">Số lượng</label>
+                                <input type="number" id="quantity" min="1" max="10" value="1" class="form-control form-control-lg">
+                            </div>
+                            <div class="col-sm-7 d-grid gap-3">
+                                <button class="btn btn-primary btn-lg" id="buyNowBtn">Mua ngay</button>
+                                <button class="btn btn-outline-primary btn-lg" id="addToCartBtn">Thêm vào giỏ</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Reviews Section -->
-    <section style="padding: 40px 20px; background-color: white;">
-        <div class="container">
-            <h2 style="font-size: 1.8rem; margin-bottom: 2rem;">Đánh giá từ khách hàng</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                <div style="background-color: #f9f9f9; padding: 1.5rem; border-radius: 10px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                        <strong>Nguyễn Văn A</strong>
-                        <span style="color: #ffc107;">★★★★★</span>
-                    </div>
-                    <p style="color: #666;">Sản phẩm rất tốt, giao hàng nhanh, đóng gói cẩn thận. Rất hài lòng với dịch vụ của TechPhone.</p>
-                </div>
-                <div style="background-color: #f9f9f9; padding: 1.5rem; border-radius: 10px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                        <strong>Trần Thị B</strong>
-                        <span style="color: #ffc107;">★★★★★</span>
-                    </div>
-                    <p style="color: #666;">iPhone 15 hoạt động rất mượt, camera chất lượng tốt. Giá cạnh tranh so với nơi khác.</p>
-                </div>
-                <div style="background-color: #f9f9f9; padding: 1.5rem; border-radius: 10px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                        <strong>Lê Minh C</strong>
-                        <span style="color: #ffc107;">★★★★☆</span>
-                    </div>
-                    <p style="color: #666;">Tốt lắm, chỉ có điều giá hơi cao một chút, nhưng chất lượng bù lại.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Related Products -->
-    <section class="related-products">
-        <div class="container">
-            <h2>Sản phẩm liên quan</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <img src="../assets/images/iphone-15-pro.jpg" alt="iPhone 15 Pro" onerror="this.src='https://via.placeholder.com/250x300?text=iPhone+15+Pro'">
-                    <h3>iPhone 15 Pro</h3>
-                    <p class="price">28.990.000 ₫</p>
-                    <p class="description">Chip A17 Pro, camera 48MP + 12MP + 12MP</p>
-                    <a href="chi-tiet.html?id=iphone15pro" class="btn btn-secondary">Xem chi tiết</a>
-                </div>
-
-                <div class="product-card">
-                    <img src="../assets/images/iphone-14.jpg" alt="iPhone 14" onerror="this.src='https://via.placeholder.com/250x300?text=iPhone+14'">
-                    <h3>iPhone 14</h3>
-                    <p class="price">19.490.000 ₫</p>
-                    <p class="description">Chip A16 Bionic, camera kép 12MP</p>
-                    <a href="chi-tiet.html?id=iphone14" class="btn btn-secondary">Xem chi tiết</a>
-                </div>
-
-                <div class="product-card">
-                    <img src="../assets/images/samsung-s24.jpg" alt="Samsung S24" onerror="this.src='https://via.placeholder.com/250x300?text=Samsung+S24'">
-                    <h3>Samsung Galaxy S24</h3>
-                    <p class="price">22.490.000 ₫</p>
-                    <p class="description">Snapdragon 8 Gen 3, AI cạnh tranh</p>
-                    <a href="chi-tiet.html?id=s24" class="btn btn-secondary">Xem chi tiết</a>
-                </div>
-
-                <div class="product-card">
-                    <img src="../assets/images/xiaomi-14-ultra.jpg" alt="Xiaomi 14 Ultra" onerror="this.src='https://via.placeholder.com/250x300?text=Xiaomi+14+Ultra'">
-                    <h3>Xiaomi 14 Ultra</h3>
-                    <p class="price">24.990.000 ₫</p>
-                    <p class="description">Snapdragon 8 Gen 3, camera Leica 50MP</p>
-                    <a href="chi-tiet.html?id=xiaomi14ultra" class="btn btn-secondary">Xem chi tiết</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- Chân trang -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -360,233 +158,13 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 THSPhone. Bản quyền được bảo vệ.</p>
-                <p>Họ và tên: Thạch Hoàng Sa | Mã số sinh viên: 110124252 | Lớp: DA24TTC | Tên đề tài: THSPHONE-CỬA HÀNG SMART PHONE ONLINE</p>
+                <p>Họ và tên: Thạch Hoàng Sa | Mã số sinh viên: 110124252 | Lớp: DA24TTC | Tên đề tài: THSPHONE-CỬA HÀNG SMARTPHONE ONLINE</p>
             </div>
         </div>
     </footer>
 
-    <script src="../js/script.js"></script>
-    <script>
-        const productCatalog = {
-            iphone15pro: {
-                name: 'iPhone 15 Pro Max',
-                image: '../assets/images/iphone-15-pro.jpg',
-                price: '30.490.000 ₫',
-                description: 'iPhone 15 Pro Max sở hữu chip A17 Pro, camera 48MP, màn hình 6.7 inch và thân titanium sang trọng.',
-                specs: {
-                    chip: 'Apple A17 Pro',
-                    ram: '8GB',
-                    storage: '256GB',
-                    screen: '6.7 inch OLED',
-                    camera: '48MP + 12MP + 12MP',
-                    battery: '4422mAh',
-                    os: 'iOS 17'
-                }
-            },
-            iphone15: {
-                name: 'iPhone 15',
-                image: '../assets/images/iphone-15.jpg',
-                price: '25.990.000 ₫',
-                description: 'iPhone 15 nổi bật với chip A17 Pro, camera 48MP và màn hình Dynamic Island mượt mà.',
-                specs: {
-                    chip: 'Apple A17 Pro',
-                    ram: '8GB',
-                    storage: '128GB',
-                    screen: '6.1 inch OLED',
-                    camera: '48MP + 12MP',
-                    battery: '3349mAh',
-                    os: 'iOS 17'
-                }
-            },
-            iphone14: {
-                name: 'iPhone 14',
-                image: '../assets/images/iphone-14.jpg',
-                price: '19.490.000 ₫',
-                description: 'iPhone 14 có chip A16 Bionic, camera kép 12MP và thiết kế nhỏ gọn tiện lợi.',
-                specs: {
-                    chip: 'Apple A16 Bionic',
-                    ram: '6GB',
-                    storage: '128GB',
-                    screen: '6.1 inch OLED',
-                    camera: '12MP + 12MP',
-                    battery: '3279mAh',
-                    os: 'iOS 16'
-                }
-            },
-            s24ultra: {
-                name: 'Samsung Galaxy S24 Ultra',
-                image: '../assets/images/samsung-s24-ultra.jpg',
-                price: '28.990.000 ₫',
-                description: 'Samsung S24 Ultra mang đến camera 200MP, bút S Pen tích hợp và sức mạnh Snapdragon 8 Gen 3.',
-                specs: {
-                    chip: 'Snapdragon 8 Gen 3',
-                    ram: '12GB',
-                    storage: '256GB',
-                    screen: '6.8 inch Dynamic AMOLED',
-                    camera: '200MP + 12MP + 10MP + 10MP',
-                    battery: '5000mAh',
-                    os: 'Android 14'
-                }
-            },
-            s24: {
-                name: 'Samsung Galaxy S24',
-                image: '../assets/images/samsung-s24.jpg',
-                price: '22.490.000 ₫',
-                description: 'Samsung Galaxy S24 có hiệu năng mạnh, camera AI và màn hình đẹp cho trải nghiệm cao cấp.',
-                specs: {
-                    chip: 'Snapdragon 8 Gen 3',
-                    ram: '12GB',
-                    storage: '256GB',
-                    screen: '6.2 inch Dynamic AMOLED',
-                    camera: '50MP + 12MP + 10MP',
-                    battery: '4000mAh',
-                    os: 'Android 14'
-                }
-            },
-            a50: {
-                name: 'Samsung Galaxy A50',
-                image: '../assets/images/samsung-a50.jpg',
-                price: '8.990.000 ₫',
-                description: 'Galaxy A50 là lựa chọn giá tốt với pin lâu, camera 48MP và hiệu năng ổn định.',
-                specs: {
-                    chip: 'Exynos 9610',
-                    ram: '4GB',
-                    storage: '128GB',
-                    screen: '6.4 inch Super AMOLED',
-                    camera: '48MP + 8MP + 5MP',
-                    battery: '4000mAh',
-                    os: 'Android 12'
-                }
-            },
-            xiaomi14ultra: {
-                name: 'Xiaomi 14 Ultra',
-                image: '../assets/images/xiaomi-14-ultra.jpg',
-                price: '24.990.000 ₫',
-                description: 'Xiaomi 14 Ultra có camera Leica 50MP, sạc 90W và hiệu năng mạnh mẽ.',
-                specs: {
-                    chip: 'Snapdragon 8 Gen 3',
-                    ram: '12GB',
-                    storage: '256GB',
-                    screen: '6.73 inch AMOLED',
-                    camera: '50MP + 50MP + 50MP',
-                    battery: '5200mAh',
-                    os: 'Android 14'
-                }
-            },
-            xiaomi13: {
-                name: 'Xiaomi 13',
-                image: '../assets/images/xiaomi-13.jpg',
-                price: '13.490.000 ₫',
-                description: 'Xiaomi 13 nổi bật với camera Leica, hiệu năng cao và sạc nhanh 120W.',
-                specs: {
-                    chip: 'Snapdragon 8 Gen 2',
-                    ram: '8GB',
-                    storage: '256GB',
-                    screen: '6.36 inch AMOLED',
-                    camera: '50MP + 13MP + 10MP',
-                    battery: '4500mAh',
-                    os: 'Android 13'
-                }
-            },
-            redmi12: {
-                name: 'Xiaomi Redmi Note 12',
-                image: '../assets/images/xiaomi-redmi.jpg',
-                price: '7.490.000 ₫',
-                description: 'Redmi Note 12 là smartphone giá mềm với pin 5000mAh và camera 50MP.',
-                specs: {
-                    chip: 'MediaTek Helio G88',
-                    ram: '6GB',
-                    storage: '128GB',
-                    screen: '6.67 inch AMOLED',
-                    camera: '50MP + 8MP + 2MP',
-                    battery: '5000mAh',
-                    os: 'Android 13'
-                }
-            },
-            oppofindx7: {
-                name: 'OPPO Find X7',
-                image: '../assets/images/oppo-find-x7.jpg',
-                price: '18.990.000 ₫',
-                description: 'OPPO Find X7 trang bị camera 50MP, chip Snapdragon thế hệ mới và thiết kế cao cấp.',
-                specs: {
-                    chip: 'Snapdragon 8 Gen 3',
-                    ram: '12GB',
-                    storage: '256GB',
-                    screen: '6.7 inch AMOLED',
-                    camera: '50MP + 50MP + 50MP',
-                    battery: '5000mAh',
-                    os: 'Android 14'
-                }
-            },
-            oppireno8: {
-                name: 'OPPO Reno 8',
-                image: '../assets/images/oppo-reno.jpg',
-                price: '10.490.000 ₫',
-                description: 'OPPO Reno 8 có thiết kế mỏng nhẹ, camera AI và sạc nhanh 80W.',
-                specs: {
-                    chip: 'MediaTek Dimensity 7050',
-                    ram: '8GB',
-                    storage: '256GB',
-                    screen: '6.43 inch AMOLED',
-                    camera: '50MP + 8MP + 2MP',
-                    battery: '4500mAh',
-                    os: 'Android 13'
-                }
-            },
-            oppoa76: {
-                name: 'OPPO A76',
-                image: '../assets/images/oppo-a76.jpg',
-                price: '5.990.000 ₫',
-                description: 'OPPO A76 là lựa chọn thân thiện với ngân sách, pin 5000mAh và camera 13MP.',
-                specs: {
-                    chip: 'Snapdragon 680',
-                    ram: '6GB',
-                    storage: '128GB',
-                    screen: '6.56 inch IPS LCD',
-                    camera: '13MP + 2MP',
-                    battery: '5000mAh',
-                    os: 'Android 12'
-                }
-            }
-        };
-
-        function getProductIdFromQuery() {
-            const params = new URLSearchParams(window.location.search);
-            return params.get('id') || 'iphone15';
-        }
-
-        function setProductDetails() {
-            const productId = getProductIdFromQuery();
-            const product = productCatalog[productId] || productCatalog['iphone15'];
-
-            document.title = product.name + ' - Chi tiết sản phẩm';
-            document.getElementById('productName').textContent = product.name;
-            document.getElementById('productImage').src = product.image;
-            document.getElementById('productImage').alt = product.name;
-            document.getElementById('productPrice').textContent = product.price;
-            document.getElementById('productDescription').textContent = product.description;
-            document.getElementById('specChip').textContent = product.specs.chip;
-            document.getElementById('specRam').textContent = product.specs.ram;
-            document.getElementById('specStorage').textContent = product.specs.storage;
-            document.getElementById('specScreen').textContent = product.specs.screen;
-            document.getElementById('specCamera').textContent = product.specs.camera;
-            document.getElementById('specBattery').textContent = product.specs.battery;
-            document.getElementById('specOS').textContent = product.specs.os;
-        }
-
-        function addToCart() {
-            const quantity = document.getElementById('quantity').value;
-            const productName = document.getElementById('productName').textContent;
-            alert('Đã thêm ' + quantity + ' ' + productName + ' vào giỏ hàng!');
-        }
-
-        function buyNow() {
-            const quantity = document.getElementById('quantity').value;
-            const productName = document.getElementById('productName').textContent;
-            alert('Tiến hành thanh toán cho ' + quantity + ' ' + productName + '!');
-        }
-
-        document.addEventListener('DOMContentLoaded', setProductDetails);
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/chi-tiet.js"></script>
 </body>
 </html>

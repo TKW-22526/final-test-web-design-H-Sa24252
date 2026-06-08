@@ -4,104 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sản phẩm - THSPhone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/san-pham.css">
     <link rel="icon" href="../assets/logo.jpg" type="image/jpeg">
-    <style>
-        .filters {
-            background-color: #f9f9f9;
-            padding: 2rem;
-            border-radius: 10px;
-            margin-bottom: 2rem;
-        }
-
-        .filter-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .filter-group label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            color: #1a1a1a;
-        }
-
-        .filter-group select,
-        .filter-group input {
-            width: 100%;
-            padding: 0.5rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        .filter-group select:focus,
-        .filter-group input:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
-        }
-
-        .products-section {
-            padding: 40px 20px;
-        }
-
-        .sort-options {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .no-products {
-            text-align: center;
-            padding: 3rem;
-            background-color: #f9f9f9;
-            border-radius: 10px;
-            color: #666;
-        }
-    </style>
 </head>
 <body class="products-page">
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Điều hướng -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <div class="logo">
-                <a href="../index.html">
-                    <img src="../assets/logo.jpg" alt="THSPHONE Logo">
-                    <span>THSPHONE</span>
-                </a>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="../index.html">Trang chủ</a></li>
-                <li><a href="gioi-thieu.html">Giới thiệu</a></li>
-                <li><a href="san-pham.html" class="active">Sản phẩm</a></li>
-                <li><a href="lien-he.html">Liên hệ</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../assets/logo.jpg" alt="THSPHONE Logo" height="40">
+                <span class="ms-2">THSPHONE</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gioi-thieu.html">Giới thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="san-pham.html">Sản phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gio-hang.html">Giỏ hàng <span id="cartCountBadge" class="badge bg-info ms-1">0</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="lien-he.html">Liên hệ</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" style="padding: 60px 20px; min-height: 300px;">
+    <div class="history-control">
+        <button type="button" class="btn btn-outline-light btn-sm" onclick="window.history.back()" title="Quay lại">←</button>
+        <button type="button" class="btn btn-outline-light btn-sm" onclick="window.history.forward()" title="Tiếp theo">→</button>
+    </div>
+
+    <!-- Phần tiêu đề -->
+    <section class="hero page-hero">
         <div class="hero-content">
             <h2>Kho sản phẩm đầy đủ</h2>
             <p>Các điện thoại mới nhất từ các thương hiệu hàng đầu</p>
         </div>
     </section>
 
-    <!-- Main Content -->
+    <!-- Nội dung chính -->
     <section class="products-section">
         <div class="container">
-            <!-- Filters -->
+            <!-- Bộ lọc -->
             <div class="filters">
-                <h3 style="margin-bottom: 1.5rem;">Bộ lọc sản phẩm</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <h3>Bộ lọc sản phẩm</h3>
+                <div class="filters-grid">
                     <div class="filter-group">
                         <label for="searchInput">Tìm kiếm:</label>
                         <input type="text" id="searchInput" placeholder="Nhập tên sản phẩm...">
@@ -130,148 +80,13 @@
                 </div>
             </div>
 
-            <!-- Products Grid -->
-            <div class="products-grid">
-                <!-- Apple Products -->
-                <div class="product-card" data-category="apple">
-                    <img src="../assets/images/iphone-15-pro.jpg" alt="iPhone 15 Pro" onerror="this.src='https://via.placeholder.com/250x300?text=iPhone+15+Pro'">
-                    <h3>iPhone 15 Pro Max</h3>
-                    <p class="price">30.490.000 ₫</p>
-                    <p class="description">Chip A17 Pro, camera 48MP, màn hình 6.7 inch, titanium</p>
-                    <div class="product-card-buttons">
-                        <a href="chi-tiet.html?id=iphone15pro" class="btn btn-secondary">Xem chi tiết</a>
-                        <button class="btn btn-secondary" onclick="addToCart('iphone15pro', 'iPhone 15 Pro Max', '30.490.000 ₫')">Thêm vào giỏ</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="apple">
-                    <img src="../assets/images/iphone-15.jpg" alt="iPhone 15" onerror="this.src='https://via.placeholder.com/250x300?text=iPhone+15'">
-                    <h3>iPhone 15</h3>
-                    <p class="price">25.990.000 ₫</p>
-                    <p class="description">Chip A17 Pro, camera 48MP, màn hình Dynamic Island</p>
-                    <div class="product-card-buttons">
-                        <a href="chi-tiet.html?id=iphone15" class="btn btn-secondary">Xem chi tiết</a>
-                        <button class="btn btn-secondary" onclick="addToCart('iphone15', 'iPhone 15', '25.990.000 ₫')">Thêm vào giỏ</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="apple">
-                    <img src="../assets/images/iphone-14.jpg" alt="iPhone 14" onerror="this.src='https://via.placeholder.com/250x300?text=iPhone+14'">
-                    <h3>iPhone 14</h3>
-                    <p class="price">19.490.000 ₫</p>
-                    <p class="description">Chip A16 Bionic, camera kép 12MP, màn hình 6.1 inch</p>
-                    <div class="product-card-buttons">
-                        <a href="chi-tiet.html?id=iphone14" class="btn btn-secondary">Xem chi tiết</a>
-                        <button class="btn btn-secondary" onclick="addToCart('iphone14', 'iPhone 14', '19.490.000 ₫')">Thêm vào giỏ</button>
-                    </div>
-                </div>
-
-                <!-- Samsung Products -->
-                <div class="product-card" data-category="samsung">
-                    <img src="../assets/images/samsung-s24-ultra.jpg" alt="Samsung S24 Ultra" onerror="this.src='https://via.placeholder.com/250x300?text=Samsung+S24+Ultra'">
-                    <h3>SS Galaxy S24 Ultra</h3>
-                    <p class="price">28.990.000 ₫</p>
-                    <p class="description">Snapdragon 8 Gen 3, camera 200MP, bút S Pen tích hợp</p>
-                    <div class="product-card-buttons">
-                        <a href="chi-tiet.html?id=s24ultra" class="btn btn-secondary">Xem chi tiết</a>
-                        <button class="btn btn-secondary" onclick="addToCart('s24ultra', 'Samsung Galaxy S24 Ultra', '28.990.000 ₫')">Thêm vào giỏ</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="samsung">
-                    <img src="../assets/images/samsung-s24.jpg" alt="Samsung S24" onerror="this.src='https://via.placeholder.com/250x300?text=Samsung+S24'">
-                    <h3>Samsung Galaxy S24</h3>
-                    <p class="price">22.490.000 ₫</p>
-                    <p class="description">Snapdragon 8 Gen 3, AI cạnh tranh, pin 4000mAh</p>
-                    <div class="product-card-buttons">
-                        <a href="chi-tiet.html?id=s24" class="btn btn-secondary">Xem chi tiết</a>
-                        <button class="btn btn-secondary" onclick="addToCart('s24', 'Samsung Galaxy S24', '22.490.000 ₫')">Thêm vào giỏ</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="samsung">
-                    <img src="../assets/images/samsung-a50.jpg" alt="Samsung A50" onerror="this.src='https://via.placeholder.com/250x300?text=Samsung+A50'">
-                    <h3>Samsung Galaxy A50</h3>
-                    <p class="price">8.990.000 ₫</p>
-                    <p class="description">Exynos 9610, camera 48MP, pin 4000mAh, giá phổ thông</p>
-                    <div class="product-card-buttons">
-                        <a href="chi-tiet.html?id=a50" class="btn btn-secondary">Xem chi tiết</a>
-                        <button class="btn btn-secondary" onclick="addToCart('a50', 'Samsung Galaxy A50', '8.990.000 ₫')">Thêm vào giỏ</button>
-                    </div>
-                </div>
-
-                <!-- Xiaomi Products -->
-                <div class="product-card" data-category="xiaomi">
-                    <img src="../assets/images/xiaomi-14-ultra.jpg" alt="Xiaomi 14 Ultra" onerror="this.src='https://via.placeholder.com/250x300?text=Xiaomi+14+Ultra'">
-                    <h3>Xiaomi 14 Ultra</h3>
-                    <p class="price">24.990.000 ₫</p>
-                    <p class="description">Snapdragon 8 Gen 3, camera Leica 50MP, sạc 90W</p>
-                    <div class="product-card-buttons">
-                        <a href="chi-tiet.html?id=xiaomi14ultra" class="btn btn-secondary">Xem chi tiết</a>
-                        <button class="btn btn-secondary" onclick="addToCart('xiaomi14ultra', 'Xiaomi 14 Ultra', '24.990.000 ₫')">Thêm vào giỏ</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="xiaomi">
-                    <img src="../assets/images/xiaomi-13.jpg" alt="Xiaomi 13" onerror="this.src='https://via.placeholder.com/250x300?text=Xiaomi+13'">
-                    <h3>Xiaomi 13</h3>
-                    <p class="price">13.490.000 ₫</p>
-                    <p class="description">Snapdragon 8 Gen 2, camera Leica, sạc nhanh 120W</p>
-                    <div class="product-card-buttons">
-                        <a href="chi-tiet.html?id=xiaomi13" class="btn btn-secondary">Xem chi tiết</a>
-                        <button class="btn btn-secondary" onclick="addToCart('xiaomi13', 'Xiaomi 13', '13.490.000 ₫')">Thêm vào giỏ</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="xiaomi">
-                    <img src="../assets/images/xiaomi-redmi.jpg" alt="Xiaomi Redmi Note" onerror="this.src='https://via.placeholder.com/250x300?text=Xiaomi+Redmi+Note'">
-                    <h3>Xiaomi Redmi Note 12</h3>
-                    <p class="price">7.490.000 ₫</p>
-                    <p class="description">MediaTek Helio G88, camera 50MP, pin 5000mAh</p>
-                    <div class="product-card-buttons">
-                        <a href="chi-tiet.html?id=redmi12" class="btn btn-secondary">Xem chi tiết</a>
-                        <button class="btn btn-secondary" onclick="addToCart('redmi12', 'Xiaomi Redmi Note 12', '7.490.000 ₫')">Thêm vào giỏ</button>
-                    </div>
-                </div>
-
-                <!-- OPPO Products -->
-                <div class="product-card" data-category="oppo">
-                    <img src="../assets/images/oppo-find-x7.jpg" alt="OPPO Find X7" onerror="this.src='https://via.placeholder.com/250x300?text=OPPO+Find+X7'">
-                    <h3>OPPO Find X7</h3>
-                    <p class="price">18.990.000 ₫</p>
-                    <p class="description">Snapdragon 8 Gen 3, camera 50MP, sạc nhanh 100W</p>
-                    <div class="product-card-buttons">
-                        <a href="chi-tiet.html?id=oppofindx7" class="btn btn-secondary">Xem chi tiết</a>
-                        <button class="btn btn-secondary" onclick="addToCart('oppofindx7', 'OPPO Find X7', '18.990.000 ₫')">Thêm vào giỏ</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="oppo">
-                    <img src="../assets/images/oppo-reno.jpg" alt="OPPO Reno" onerror="this.src='https://via.placeholder.com/250x300?text=OPPO+Reno'">
-                    <h3>OPPO Reno 8</h3>
-                    <p class="price">10.490.000 ₫</p>
-                    <p class="description">MediaTek Dimensity 7050, camera AI, thiết kế sang trọng</p>
-                    <div class="product-card-buttons">
-                        <a href="chi-tiet.html?id=oppireno8" class="btn btn-secondary">Xem chi tiết</a>
-                        <button class="btn btn-secondary" onclick="addToCart('oppireno8', 'OPPO Reno 8', '10.490.000 ₫')">Thêm vào giỏ</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="oppo">
-                    <img src="../assets/images/oppo-a76.jpg" alt="OPPO A76" onerror="this.src='https://via.placeholder.com/250x300?text=OPPO+A76'">
-                    <h3>OPPO A76</h3>
-                    <p class="price">5.990.000 ₫</p>
-                    <p class="description">Snapdragon 680, camera 13MP, pin 5000mAh giá rẻ</p>
-                    <div class="product-card-buttons">
-                        <a href="chi-tiet.html?id=oppoa76" class="btn btn-secondary">Xem chi tiết</a>
-                        <button class="btn btn-secondary" onclick="addToCart('oppoa76', 'OPPO A76', '5.990.000 ₫')">Thêm vào giỏ</button>
-                    </div>
-                </div>
-            </div>
+            <!-- Lưới sản phẩm -->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-4" id="productGrid"></div>
+            <div id="noProductsMessage" class="alert alert-warning text-center d-none mt-4">Không tìm thấy sản phẩm.</div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Chân trang -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -306,11 +121,13 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 THSPhone. Bản quyền được bảo vệ.</p>
-                <p>Họ và tên: Thạch Hoàng Sa | Mã số sinh viên: 110124252 | Lớp: DA24TTC | Tên đề tài: THSPHONE-CỬA HÀNG SMART PHONE ONLINE</p>
+                <p>Họ và tên: Thạch Hoàng Sa | Mã số sinh viên: 110124252 | Lớp: DA24TTC | Tên đề tài: THSPHONE-CỬA HÀNG SMARTPHONE ONLINE</p>
             </div>
         </div>
     </footer>
 
-    <script src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/san-pham.js"></script>
 </body>
 </html>

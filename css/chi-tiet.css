@@ -1,0 +1,72 @@
+/*
+    chi-tiet.css
+    - Kiểu dành cho trang chi tiết sản phẩm.
+    - Chủ yếu chứa các kiểu riêng cho khung ảnh sản phẩm và bố cục thông số.
+    - Ít trùng với file khác; vẫn nên giữ các quy tắc chung (ví dụ `.card`) ở `style.css` nếu cần dùng chung.
+*/
+
+.product-detail {
+    padding: 3rem 0;
+}
+/* Đảm bảo hình ảnh sản phẩm không bị biến dạng và hiển thị đồng nhất */
+#productImage {
+    width: 100%;
+    max-width: 100%;
+    height: auto; /* giữ tỉ lệ ảnh */
+    max-height: 520px; /* giới hạn chiều cao để đồng bộ hiển thị */
+    margin: 0 auto;
+    display: block;
+    object-fit: contain; /* ảnh nhỏ vừa khung, không bị cắt méo */
+}
+
+/* Giữ khung ảnh cân đối và căn giữa nội dung trong thẻ card */
+.card.border-0.shadow-sm.overflow-hidden {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 360px;
+}
+
+.product-info h2 {
+    font-size: 2.25rem;
+    color: #1a1a1a;
+}
+
+.rating {
+    color: #ffc107;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+.description-full {
+    color: #6c757d;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.specifications .card-body {
+    padding: 1.5rem;
+}
+
+.specifications h3 {
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.specifications .row > div {
+    min-width: 50%;
+}
+
+.specifications .d-flex {
+    gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .product-detail {
+        padding: 2rem 0;
+    }
+
+    .product-info h2 {
+        font-size: 1.85rem;
+    }
+}

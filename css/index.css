@@ -1,0 +1,163 @@
+/*
+    index.css
+    - Kiểu dành cho trang chủ (homepage) và các thành phần chuyên biệt trên homepage.
+*/
+
+/*
+  index.css
+  - Chứa các kiểu chuyên biệt cho trang chủ (featured-products, features).
+  - Quy tắc chung như `.hero`, `.product-card`, `.products-grid`, `.newsletter`
+    đã được hợp nhất vào `style.css` để tránh trùng lặp. Nếu cần điều chỉnh riêng cho
+    homepage (padding, background) thì thêm override nhỏ ở đây.
+*/
+
+/* Phần sản phẩm nổi bật (homepage-specific overrides) */
+.featured-products {
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+}
+
+.featured-products .container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1a1a1a;
+}
+
+/* Dùng quy tắc `products-grid` và `product-card` chung từ style.css; chỉ ghi các override nếu cần */
+
+.text-center {
+    text-align: center;
+}
+
+/* Phần tính năng */
+.features {
+    padding: 80px 20px;
+    background-color: white;
+}
+
+.features .container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1a1a1a;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    background-color: #f0f0f0;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+}
+
+.feature-item p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Phần bản tin */
+.newsletter {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.newsletter p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.newsletter-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.newsletter-form input {
+    flex: 1;
+    min-width: 250px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+.newsletter-form .btn {
+    white-space: nowrap;
+}
+
+/* Thiết kế đáp ứng cho trang chủ */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .featured-products .container h2 {
+        font-size: 2rem;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+    }
+
+    .features .container h2 {
+        font-size: 2rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input {
+        min-width: 100%;
+    }
+}
+
+/* Ensure newsletter inputs behave on very small phones (320/375) */
+@media (max-width: 375px) {
+    .newsletter-form input {
+        min-width: 100%;
+    }
+}

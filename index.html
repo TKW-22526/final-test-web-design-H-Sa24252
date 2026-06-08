@@ -4,34 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THSPhone - Cửa hàng bán điện thoại di động</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Điều hướng -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/logo.jpg" alt="THSPHONE Logo">
-                    <span>THSPHONE</span>
-                </a>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="active">Trang chủ</a></li>
-                <li><a href="html/gioi-thieu.html">Giới thiệu</a></li>
-                <li><a href="html/san-pham.html">Sản phẩm</a></li>
-                <li><a href="html/lien-he.html">Liên hệ</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/logo.jpg" alt="THSPHONE Logo" height="40">
+                <span class="ms-2">THSPHONE</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html/gioi-thieu.html">Giới thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html/san-pham.html">Sản phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html/gio-hang.html">Giỏ hàng <span id="cartCountBadge" class="badge bg-info ms-1">0</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="html/lien-he.html">Liên hệ</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <div class="history-control">
+        <button type="button" class="btn btn-outline-light btn-sm" onclick="window.history.back()" title="Quay lại">←</button>
+        <button type="button" class="btn btn-outline-light btn-sm" onclick="window.history.forward()" title="Tiếp theo">→</button>
+    </div>
+
+    <!-- Phần tiêu đề -->
     <section class="hero">
         <div class="hero-content">
             <h2>Chào mừng đến THSPhone</h2>
@@ -40,7 +46,7 @@
         </div>
     </section>
 
-    <!-- Featured Products -->
+    <!-- Sản phẩm nổi bật -->
     <section class="featured-products">
         <div class="container">
             <h2>Sản phẩm nổi bật</h2>
@@ -50,7 +56,7 @@
                     <h3>iPhone 15</h3>
                     <p class="price">25.990.000 ₫</p>
                     <p class="description">Chip A17 Pro, camera 48MP, màn hình Dynamic Island</p>
-                    <a href="html/chi-tiet.html?id=1" class="btn btn-secondary">Xem chi tiết</a>
+                    <a href="html/chi-tiet.html?id=iphone15" class="btn btn-secondary">Xem chi tiết</a>
                 </div>
 
                 <div class="product-card">
@@ -58,7 +64,7 @@
                     <h3>Samsung Galaxy S24</h3>
                     <p class="price">22.490.000 ₫</p>
                     <p class="description">Snapdragon 8 Gen 3, AI cạnh tranh, pin 4000mAh</p>
-                    <a href="html/chi-tiet.html?id=2" class="btn btn-secondary">Xem chi tiết</a>
+                    <a href="html/chi-tiet.html?id=s24" class="btn btn-secondary">Xem chi tiết</a>
                 </div>
 
                 <div class="product-card">
@@ -66,7 +72,7 @@
                     <h3>Xiaomi 13</h3>
                     <p class="price">13.490.000 ₫</p>
                     <p class="description">Snapdragon 8 Gen 2, camera Leica, sạc nhanh 120W</p>
-                    <a href="html/chi-tiet.html?id=3" class="btn btn-secondary">Xem chi tiết</a>
+                    <a href="html/chi-tiet.html?id=xiaomi13" class="btn btn-secondary">Xem chi tiết</a>
                 </div>
 
                 <div class="product-card">
@@ -74,7 +80,7 @@
                     <h3>OPPO Reno 8</h3>
                     <p class="price">10.490.000 ₫</p>
                     <p class="description">MediaTek Dimensity 7050, camera AI, thiết kế sang trọng</p>
-                    <a href="html/chi-tiet.html?id=4" class="btn btn-secondary">Xem chi tiết</a>
+                    <a href="html/chi-tiet.html?id=oppireno8" class="btn btn-secondary">Xem chi tiết</a>
                 </div>
             </div>
             <div class="text-center">
@@ -83,48 +89,7 @@
         </div>
     </section>
 
-    <!-- Features -->
-    <section class="features">
-        <div class="container">
-            <h2>Tại sao chọn THSPhone</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">📦</div>
-                    <h3>Giao hàng nhanh</h3>
-                    <p>Giao hàng miễn phí toàn thành phố, 24-48 giờ</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">✓</div>
-                    <h3>Chính hãng 100%</h3>
-                    <p>Toàn bộ sản phẩm chính hãng, có bảo hành</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">💰</div>
-                    <h3>Giá cạnh tranh</h3>
-                    <p>Giá tốt nhất thị trường, không có giá nào rẻ hơn</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🛡️</div>
-                    <h3>Hỗ trợ 24/7</h3>
-                    <p>Đội ngũ hỗ trợ khách hàng luôn sẵn sàng</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter -->
-    <section class="newsletter">
-        <div class="container">
-            <h2>Đăng ký nhận thông tin</h2>
-            <p>Nhận thông tin về các sản phẩm mới và khuyến mãi hấp dẫn</p>
-            <form class="newsletter-form" id="newsletterForm">
-                <input type="email" placeholder="Nhập email của bạn" required>
-                <button type="submit" class="btn btn-primary">Đăng ký</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- Chân trang -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -159,11 +124,13 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 THSPhone. Bản quyền được bảo vệ.</p>
-                <p>Họ và tên: Thạch Hoàng Sa | Mã số sinh viên: 110124252 | Lớp: DA24TTC | Tên đề tài: THSPHONE - CỬA HÀNG SMART PHONE ONLINE</p>
+                <p>Họ và tên: Thạch Hoàng Sa | Mã số sinh viên: 110124252 | Lớp: DA24TTC | Tên đề tài: THSPHONE - CỬA HÀNG SMARTPHONE ONLINE</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

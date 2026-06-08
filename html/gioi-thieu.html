@@ -3,175 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giới thiệu - THSPhone</title>
+    <title>Giới thiệu - Thông tin cá nhân</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/gioi-thieu.css">
     <link rel="icon" href="../assets/logo.jpg" type="image/jpeg">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Điều hướng -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <div class="logo">
-                <a href="../index.html">
-                    <img src="../assets/logo.jpg" alt="THSPHONE Logo">
-                    <span>THSPHONE</span>
-                </a>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="../index.html">Trang chủ</a></li>
-                <li><a href="gioi-thieu.html" class="active">Giới thiệu</a></li>
-                <li><a href="san-pham.html">Sản phẩm</a></li>
-                <li><a href="lien-he.html">Liên hệ</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../assets/logo.jpg" alt="THSPHONE Logo" height="40">
+                <span class="ms-2">THSPHONE</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gioi-thieu.html">Giới thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="san-pham.html">Sản phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gio-hang.html">Giỏ hàng <span id="cartCountBadge" class="badge bg-info ms-1">0</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="lien-he.html">Liên hệ</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
+    <div class="history-control">
+        <button type="button" class="btn btn-outline-light btn-sm" onclick="window.history.back()" title="Quay lại">←</button>
+        <button type="button" class="btn btn-outline-light btn-sm" onclick="window.history.forward()" title="Tiếp theo">→</button>
+    </div>
+
+    <!-- Nội dung chính -->
     <main>
-        <!-- Hero Section -->
-        <section class="hero" style="padding: 60px 20px; min-height: 300px;">
-            <div class="hero-content">
-                <h2>Về THSPhone</h2>
-                <p>Câu chuyện của chúng tôi bắt đầu từ đam mê với công nghệ</p>
+        <!-- Phần tiêu đề: Giới thiệu cá nhân -->
+        <section class="hero text-light page-hero">
+            <div class="container text-center">
+                <h2>Giới thiệu cá nhân</h2>
+                <p>Trang tóm tắt thông tin cá nhân, học vấn và kỹ năng</p>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section class="about" style="padding: 60px 20px; background-color: #f9f9f9;">
+        <!-- Thông tin cá nhân -->
+        <section class="profile" style="padding: 40px 20px;">
             <div class="container">
-                <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Câu chuyện của chúng tôi</h2>
-                
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; align-items: center;">
-                    <div>
-                        <h3 style="color: #667eea; margin-bottom: 1rem;">Bắt đầu từ một ý tưởng</h3>
-                        <p style="margin-bottom: 1rem; line-height: 1.8; color: #555;">
-                            THSPhone được thành lập vào năm 2020 với mục tiêu mang những sản phẩm công nghệ tốt nhất đến tay mỗi khách hàng Việt Nam. 
-                            Chúng tôi tin rằng công nghệ không nên là một khoảng cách mà là cầu nối kết nối con người.
-                        </p>
-                        <p style="margin-bottom: 1rem; line-height: 1.8; color: #555;">
-                            Với một đội ngũ nhỏ nhưng nhiệt huyết, chúng tôi đã bắt đầu hành trình cung cấp các điện thoại di động chính hãng 
-                            từ những thương hiệu hàng đầu thế giới.
-                        </p>
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-4 text-center">
+                        <!-- Ảnh đại diện trong khung hình vuông -->
+                        <img src="../assets/images/avatar.jpg" alt="Ảnh đại diện" class="img-fluid profile-avatar">
                     </div>
-                    <div style="background-color: #667eea; height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white;">
-                        <p style="text-align: center; font-size: 4rem;">📱</p>
+                    <div class="col-md-8">
+                        <h3>Họ và tên: Thạch Hoàng Sa</h3>
+                        <p><strong>Tuổi:</strong> 25 &nbsp;|&nbsp; <strong>Địa chỉ:</strong> Vĩnh Long</p>
+                        <p><strong>Email:</strong> <a href="mailto:tsusa1605@gmail.com">tsusa1605@gmail.com</a> &nbsp;|&nbsp; <strong>Điện thoại:</strong> 0373107408</p>
+                        <p>Ngành học: Công nghệ thông tin — Lớp: DA24TTC — Mã số sinh viên: 110124252</p>
+                        <p class="mt-3"><strong>Giới thiệu:</strong> Tôi tên là <b>Thạch Hoàng Sa</b>, hiện tôi đang là sinh viên năm thứ hai của ngành <i>Công nghệ Thông tin</i> của <b>Đại học Trà Vinh</b>. Tôi luôn yêu thích khám phá những điều mới mẻ đặc biệt là <i>các thiết bị điện tử và công nghệ hiện đại</i>. Tôi quan tâm đến <u>lập trình</u> và <u>thiết kế giao diện</u>. Mặc dù hiện tại tôi còn gà mờ nhưng tôi tin rằng <b>Kiên trì</b> và <b>Chăm chỉ</b> sẽ giúp tôi đạt được mục tiêu của mình. Trong tương lai, tôi mong muốn trở thành một <b>developer</b> đầy sáng tạo và chuyên nghiệp.</p>
                     </div>
                 </div>
 
-                <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem; margin-top: 2rem;">Các mốc quan trọng</h2>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
-                    <div style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                        <h3 style="color: #667eea; font-size: 1.5rem;">2020</h3>
-                        <p style="color: #666;">Thành lập THSPhone</p>
-                    </div>
-                    <div style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                        <h3 style="color: #667eea; font-size: 1.5rem;">2021</h3>
-                        <p style="color: #666;">Khai trương 5 chi nhánh</p>
-                    </div>
-                    <div style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                        <h3 style="color: #667eea; font-size: 1.5rem;">2022</h3>
-                        <p style="color: #666;">Đạt 10,000 khách hàng</p>
-                    </div>
-                    <div style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                        <h3 style="color: #667eea; font-size: 1.5rem;">2023</h3>
-                        <p style="color: #666;">Mở dịch vụ bảo hành mở rộng</p>
-                    </div>
-                    <div style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                        <h3 style="color: #667eea; font-size: 1.5rem;">2024</h3>
-                        <p style="color: #666;">Đạt 50,000 khách hàng hài lòng</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <hr style="margin: 2rem 0;">
 
-        <!-- Mission Section -->
-        <section style="padding: 60px 20px; background-color: white;">
-            <div class="container">
-                <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Sứ mệnh & Tầm nhìn</h2>
-                
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 10px;">
-                        <h3 style="margin-bottom: 1rem; font-size: 1.3rem;">🎯 Sứ mệnh</h3>
-                        <p style="line-height: 1.8;">
-                            Cung cấp điện thoại di động chính hãng, giá tốt và dịch vụ hậu mãi tốt nhất, giúp mọi người tiếp cận công nghệ một cách dễ dàng.
-                        </p>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <h4>Mục tiêu nghề nghiệp</h4>
+                        <p>Tìm kiếm cơ hội phát triển kỹ năng lập trình web, tham gia dự án thực tế và đóng góp vào sản phẩm có giá trị cho người dùng.</p>
                     </div>
-                    <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 2rem; border-radius: 10px;">
-                        <h3 style="margin-bottom: 1rem; font-size: 1.3rem;">🚀 Tầm nhìn</h3>
-                        <p style="line-height: 1.8;">
-                            Trở thành chuỗi bán lẻ điện thoại di động hàng đầu tại Việt Nam, được khách hàng tin tưởng và yêu thích.
-                        </p>
+                    <div class="col-md-6">
+                        <h4>Kỹ năng &amp; Mục tiêu</h4>
+                        <ul>
+                            <li>Biết cơ bản về HTML</li>
+                            <li>Sử dụng Git và GitHub</li>
+                            <li>Đang học CSS, JavaScript</li>
+                            <li>Viết được HTML cơ bản và biết cấu trúc trang web</li>
+                            <li>Phát hiện lỗi và sửa được lỗi, tự kiểm tra kết quả</li>
+                            <li>Mục tiêu: Trở thành developer sáng tạo, nắm vững lập trình web và tham gia dự án thực tế</li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Values Section -->
-        <section style="padding: 60px 20px; background-color: #f9f9f9;">
-            <div class="container">
-                <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Các giá trị cốt lõi</h2>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                    <div style="background: white; padding: 2rem; border-radius: 10px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                        <div style="font-size: 3rem; margin-bottom: 1rem;">✨</div>
-                        <h3 style="margin-bottom: 0.5rem;">Chất lượng</h3>
-                        <p style="color: #666;">Chỉ bán sản phẩm chính hãng, đảm bảo chất lượng tốt nhất</p>
+                <div class="row g-4 mt-4">
+                    <div class="col-md-6">
+                        <h4>Học vấn</h4>
+                        <p>Đại học Trà Vinh — Chuyên ngành: Công nghệ Thông tin. Hiện là sinh viên lớp DA24TTC.</p>
                     </div>
-                    <div style="background: white; padding: 2rem; border-radius: 10px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                        <div style="font-size: 3rem; margin-bottom: 1rem;">🤝</div>
-                        <h3 style="margin-bottom: 0.5rem;">Tin tưởng</h3>
-                        <p style="color: #666;">Xây dựng mối quan hệ lâu dài dựa trên sự tin tưởng</p>
-                    </div>
-                    <div style="background: white; padding: 2rem; border-radius: 10px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                        <div style="font-size: 3rem; margin-bottom: 1rem;">💡</div>
-                        <h3 style="margin-bottom: 0.5rem;">Đổi mới</h3>
-                        <p style="color: #666;">Luôn cập nhật các sản phẩm mới nhất trên thị trường</p>
-                    </div>
-                    <div style="background: white; padding: 2rem; border-radius: 10px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                        <div style="font-size: 3rem; margin-bottom: 1rem;">❤️</div>
-                        <h3 style="margin-bottom: 0.5rem;">Chăm sóc</h3>
-                        <p style="color: #666;">Dịch vụ khách hàng 24/7, luôn sẵn sàng giúp đỡ</p>
+                    <div class="col-md-6">
+                        <h4>Sở thích</h4>
+                        <ul>
+                            <li>Chơi game, nghe nhạc</li>
+                            <li>Đọc sách, tìm tòi code và nghiên cứu làm web</li>
+                            <li>Đam mê các loại nhạc cụ dân tộc</li>
+                            <li>Du lịch trong và ngoài nước</li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Team Section -->
-        <section style="padding: 60px 20px; background-color: white;">
-            <div class="container">
-                <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Đội ngũ chúng tôi</h2>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
-                    <div style="text-align: center;">
-                        <div style="width: 150px; height: 150px; background: #667eea; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">👨‍💼</div>
-                        <h3>Nguyễn Văn A</h3>
-                        <p style="color: #667eea; font-weight: bold;">Giám đốc điều hành</p>
-                        <p style="color: #666; font-size: 0.9rem;">15 năm kinh nghiệm trong lĩnh vực bán lẻ công nghệ</p>
+                <section class="project-intro py-4">
+                    <div class="container">
+                        <h3>Giới thiệu dự án</h3>
+                        <p><strong>Đây là dự án kết thúc môn Thiết kế Web, trình bày website thương mại điện tử mẫu dành cho khóa học.</strong></p>
                     </div>
-                    <div style="text-align: center;">
-                        <div style="width: 150px; height: 150px; background: #764ba2; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">👩‍💼</div>
-                        <h3>Trần Thị B</h3>
-                        <p style="color: #764ba2; font-weight: bold;">Giám đốc kinh doanh</p>
-                        <p style="color: #666; font-size: 0.9rem;">10 năm kinh nghiệm marketing và bán hàng</p>
+                </section>
+
+                <section class="technologies-used py-4">
+                    <div class="container">
+                        <h3>Công nghệ sử dụng</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">HTML5</li>
+                            <li class="list-group-item">CSS3</li>
+                            <li class="list-group-item">JavaScript</li>
+                            <li class="list-group-item">Bootstrap 5</li>
+                            <li class="list-group-item">LocalStorage</li>
+                        </ul>
                     </div>
-                    <div style="text-align: center;">
-                        <div style="width: 150px; height: 150px; background: #00d4ff; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: #1a1a1a; font-size: 3rem;">👨‍💻</div>
-                        <h3>Lê Minh C</h3>
-                        <p style="color: #00d4ff; font-weight: bold;">Trưởng phòng IT</p>
-                        <p style="color: #666; font-size: 0.9rem;">8 năm phát triển hệ thống bán hàng online</p>
-                    </div>
-                </div>
+                </section>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Chân trang -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -206,11 +158,12 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 THSPhone. Bản quyền được bảo vệ.</p>
-                <p>Họ và tên: Thạch Hoàng Sa | Mã số sinh viên: 110124252 | Lớp: DA24TTC | Tên đề tài: THSPHONE-CỬA HÀNG SMART PHONE ONLINE</p>
+                <p>Họ và tên: Thạch Hoàng Sa | Mã số sinh viên: 110124252 | Lớp: DA24TTC | Tên đề tài: THSPHONE-CỬA HÀNG SMARTPHONE ONLINE</p>
             </div>
         </div>
     </footer>
 
-    <script src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/common.js"></script>
 </body>
 </html>

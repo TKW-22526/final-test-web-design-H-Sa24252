@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng - THSPhone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/gio-hang.css">
+    <link rel="icon" href="../assets/logo.jpg" type="image/jpeg">
+</head>
+<body>
+    <!-- Điều hướng -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../assets/logo.jpg" alt="THSPHONE Logo" height="40">
+                <span class="ms-2">THSPHONE</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gioi-thieu.html">Giới thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="san-pham.html">Sản phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gio-hang.html">Giỏ hàng <span id="cartCountBadge" class="badge bg-info ms-1">0</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="lien-he.html">Liên hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="history-control">
+        <button type="button" class="btn btn-outline-light btn-sm" onclick="window.history.back()" title="Quay lại">←</button>
+        <button type="button" class="btn btn-outline-light btn-sm" onclick="window.history.forward()" title="Tiếp theo">→</button>
+    </div>
+
+    <!-- Phần tiêu đề -->
+    <section class="hero page-hero">
+        <div class="hero-content">
+            <h2>Giỏ hàng của bạn</h2>
+            <p>Xem và quản lý các sản phẩm trong giỏ hàng</p>
+        </div>
+    </section>
+
+    <!-- Phần giỏ hàng -->
+    <section class="cart-section">
+        <div class="container">
+            <div class="cart-container">
+                <!-- Các mặt hàng trong giỏ -->
+                <div class="cart-items">
+                    <div class="empty-cart">
+                        <div class="empty-cart-icon">🛒</div>
+                        <h2>Giỏ hàng của bạn trống</h2>
+                        <p>Bạn chưa có sản phẩm nào trong giỏ hàng. Hãy tiếp tục mua sắm!</p>
+                        <a href="san-pham.html" class="btn btn-primary">Tiếp tục mua sắm</a>
+                    </div>
+                </div>
+
+                <!-- Các mặt hàng trong giỏ -->
+                <div class="cart-summary">
+                    <h3>Tóm tắt đơn hàng</h3>
+                    <p class="text-center text-muted">Chưa có sản phẩm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chân trang -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Phần giới thiệu -->
+                <div class="footer-section">
+                    <h3>Về THSPhone</h3>
+                    <p>THSPhone là cửa hàng bán điện thoại di động chính hãng uy tín hàng đầu tại Việt Nam. Chúng tôi cung cấp các sản phẩm công nghệ tốt nhất với giá cạnh tranh.</p>
+                </div>
+
+                <!-- Liên kết nhanh -->
+                <div class="footer-section">
+                    <h4>Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="../index.html">Trang chủ</a></li>
+                        <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+                        <li><a href="san-pham.html">Sản phẩm</a></li>
+                        <li><a href="lien-he.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Thông tin liên hệ -->
+                <div class="footer-section">
+                    <h4>Liên hệ</h4>
+                    <p>Địa chỉ: 123 Đường ABC, Thành phố HCM</p>
+                    <p>Điện thoại: 0901.234.567</p>
+                    <p>Email: info@thsphone.com</p>
+                </div>
+
+                <!-- Liên kết mạng xã hội -->
+                <div class="footer-section">
+                    <h4>Theo dõi chúng tôi</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">Facebook</a>
+                        <a href="#" class="social-icon">Instagram</a>
+                        <a href="#" class="social-icon">Twitter</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 THSPhone. Tất cả quyền được bảo lưu.</p>
+                <p>Họ và tên: Thạch Hoàng Sa | Mã số sinh viên: 110124252 | Lớp: DA24TTC | Tên đề tài: THSPHONE-CỬA HÀNG SMARTPHONE ONLINE</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script riêng cho trang -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gio-hang.js"></script>
+</body>
+</html>

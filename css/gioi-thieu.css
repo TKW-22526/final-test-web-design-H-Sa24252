@@ -1,0 +1,61 @@
+/*
+    gioi-thieu.css
+    - Kiểu dành cho trang giới thiệu (profile/about).
+    - Lưu ý: `.hero` cũng được định nghĩa trong `style.css`/`index.css`; ở đây chỉ ghi kiểu riêng cho trang giới thiệu.
+*/
+
+.hero {
+    padding: 60px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.hero .container {
+    max-width: 900px;
+}
+
+.profile {
+    padding: 40px 20px;
+}
+
+.profile img {
+    max-width: 220px;
+    border-radius: 16px;
+    border: 2px solid #ddd;
+}
+
+.profile h3 {
+    margin-bottom: 1rem;
+}
+
+.profile p {
+    color: #444;
+    line-height: 1.7;
+}
+
+.profile ul {
+    padding-left: 1.2rem;
+}
+
+.profile ul li {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .hero,
+    .profile {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.profile-avatar {
+    max-width: 220px;
+    border-radius: 16px;
+    border: 2px solid #ddd;
+}
+
+.technologies-used h3 {
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
