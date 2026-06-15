@@ -1,184 +1,171 @@
-# Dự án kết thúc môn
+# THSPhone - Cửa Hàng Smartphone Online
 
-Đây là thư mục dự án kết thúc môn của sinh viên. Dự án được tổ chức theo cấu trúc rõ ràng nhằm phục vụ quá trình phát triển website, quản lý mã nguồn và nộp sản phẩm cuối kỳ.
+## Giới thiệu
 
-## 1. Cấu trúc thư mục dự án
+THSPhone là website bán điện thoại trực tuyến được xây dựng trong khuôn khổ học phần Thiết kế Web. Dự án mô phỏng một cửa hàng smartphone trực tuyến với các chức năng cơ bản như xem sản phẩm, tìm kiếm sản phẩm, xem chi tiết sản phẩm, quản lý giỏ hàng và gửi thông tin liên hệ.
+
+Website được phát triển nhằm vận dụng các kiến thức đã học về HTML5, CSS3, JavaScript và Bootstrap Framework để xây dựng một hệ thống web hoàn chỉnh có giao diện thân thiện và khả năng tương thích trên nhiều thiết bị.
+
+## Mục tiêu dự án
+
+* Xây dựng website bán điện thoại trực tuyến đơn giản.
+* Áp dụng kiến thức HTML, CSS và JavaScript vào thực tế.
+* Thiết kế giao diện đáp ứng (Responsive Design).
+* Thực hiện chức năng tìm kiếm sản phẩm.
+* Xây dựng giỏ hàng bằng LocalStorage.
+* Triển khai website trên GitHub Pages.
+
+## Công nghệ sử dụng
+
+### Front-end
+
+* HTML5
+* CSS3
+* JavaScript (ES6)
+* Bootstrap 5
+
+### Công cụ phát triển
+
+* Visual Studio Code
+* Git
+* GitHub
+* GitHub Pages
+* Figma
+
+## Chức năng chính
+
+### Trang chủ
+
+* Hiển thị banner quảng cáo.
+* Giới thiệu sản phẩm nổi bật.
+* Điều hướng đến các trang chức năng.
+
+### Trang sản phẩm
+
+* Hiển thị danh sách điện thoại.
+* Tìm kiếm sản phẩm theo tên.
+* Lọc và xem thông tin sản phẩm.
+
+### Trang chi tiết sản phẩm
+
+* Hiển thị hình ảnh sản phẩm.
+* Hiển thị giá bán và thông số cơ bản.
+* Thêm sản phẩm vào giỏ hàng.
+
+### Trang giỏ hàng
+
+* Hiển thị danh sách sản phẩm đã chọn.
+* Cập nhật số lượng sản phẩm.
+* Xóa sản phẩm khỏi giỏ hàng.
+* Tính tổng tiền đơn hàng.
+
+### Trang giới thiệu
+
+* Giới thiệu về cửa hàng THSPhone.
+* Trình bày mục tiêu và định hướng phát triển.
+
+### Trang liên hệ
+
+* Form liên hệ khách hàng.
+* Thu thập thông tin phản hồi.
+
+## Cấu trúc thư mục
 
 ```text
-.
-├── .git/
-├── assets/
-│   └── thesis/
-│       └── template_thesis.dotx
-├── css/
-├── html/
-├── js/
+final-test-web-design-H-Sa24252
+│
+├── assets
+│   ├── images
+│   └── thesis
+│       └── logo.jpg
+│
+├── css
+│   ├── chi-tiet.css
+│   ├── gio-hang.css
+│   ├── gioi-thieu.css
+│   ├── index.css
+│   ├── lien-he.css
+│   ├── san-pham.css
+│   └── style.css
+│
+├── html
+│   ├── chi-tiet.html
+│   ├── gio-hang.html
+│   ├── gioi-thieu.html
+│   ├── lien-he.html
+│   └── san-pham.html
+│
+├── js
+│   ├── chi-tiet.js
+│   ├── common.js
+│   ├── gio-hang.js
+│   ├── index.js
+│   ├── lien-he.js
+│   ├── san-pham.js
+│   └── script.js
+│
 ├── index.html
+│
 └── README.md
 ```
+#### Cấu trúc thư mục dự án
 
-## 2. Mô tả các thư mục và tập tin
+Dự án THSPhone được tổ chức theo mô hình phân tách giao diện, chức năng và tài nguyên nhằm giúp việc quản lý mã nguồn trở nên rõ ràng và thuận tiện hơn trong quá trình phát triển.
 
-### `.git/`
+Thư mục assets được sử dụng để lưu trữ các tài nguyên của website. Trong đó, thư mục images chứa hình ảnh sản phẩm, banner và các hình ảnh phục vụ giao diện. Thư mục thesis chứa các tài nguyên phục vụ cho việc trình bày dự án, bao gồm logo và các hình ảnh minh họa liên quan.
 
-Thư mục quản lý mã nguồn của Git. Thư mục này được tạo tự động khi dự án được khởi tạo hoặc clone từ GitHub.
+Thư mục css chứa toàn bộ các tệp định dạng giao diện của website. Mỗi trang chức năng được xây dựng với một tệp CSS riêng nhằm giúp dễ dàng chỉnh sửa và bảo trì giao diện. Ngoài ra, tệp style.css được sử dụng để lưu trữ các định dạng dùng chung cho toàn bộ hệ thống.
 
-Sinh viên không chỉnh sửa trực tiếp nội dung bên trong thư mục này.
+Thư mục html chứa các trang chức năng của website như trang sản phẩm, trang chi tiết sản phẩm, trang giỏ hàng, trang giới thiệu và trang liên hệ.
 
----
+Thư mục js chứa các tệp JavaScript dùng để xử lý dữ liệu và tương tác người dùng. Mỗi trang có một tệp JavaScript riêng để thực hiện các chức năng tương ứng. Tệp common.js được sử dụng để lưu trữ các hàm dùng chung trong toàn hệ thống.
 
-### `assets/`
+Tệp index.html được đặt tại thư mục gốc và đóng vai trò là trang chủ của website. Đây cũng là điểm truy cập đầu tiên khi người dùng truy cập vào hệ thống.
 
-Thư mục dùng để lưu trữ các tài nguyên dùng chung cho dự án, ví dụ:
+Tệp README.md được sử dụng để mô tả thông tin dự án, hướng dẫn sử dụng và cung cấp các thông tin cần thiết cho người phát triển hoặc người đánh giá hệ thống.
 
-- Hình ảnh
-- Biểu tượng
-- Tài liệu
-- Mẫu báo cáo
-- Các tập tin hỗ trợ khác
+## Cài đặt và chạy dự án
 
-Trong đó, mẫu báo cáo kết thúc môn được cung cấp tại:
+### Cách 1: Mở trực tiếp
+
+Tải mã nguồn về máy tính và mở file:
 
 ```text
-assets/thesis/template_thesis.dotx
+index.html
 ```
 
-Sinh viên sử dụng tập tin này để thực hiện báo cáo kết thúc môn theo đúng mẫu quy định.
+bằng trình duyệt web.
 
----
+### Cách 2: Sử dụng Live Server
 
-### `css/`
+1. Mở dự án bằng Visual Studio Code.
+2. Cài đặt tiện ích mở rộng Live Server.
+3. Nhấp chuột phải vào file index.html.
+4. Chọn "Open with Live Server".
 
-Thư mục chứa các tập tin định dạng giao diện website.
+## Triển khai trực tuyến
 
-Ví dụ:
+Website được triển khai bằng GitHub Pages.
 
-```text
-css/style.css
-css/responsive.css
-```
+Link truy cập:
 
-Các tập tin trong thư mục này dùng để thiết kế bố cục, màu sắc, font chữ, khoảng cách, hiệu ứng hiển thị và khả năng tương thích trên các thiết bị khác nhau.
+Liên kết GitHub repository:https://github.com/TKW-22526/final-test-web-design-H-Sa24252.git
+Liên kết GitHub Pages:https://tkw-22526.github.io/final-test-web-design-H-Sa24252/
 
----
+## Tác giả
 
-### `html/`
-
-Thư mục chứa các trang HTML thành phần của website.
-
-Ví dụ:
-
-```text
-html/about.html
-html/contact.html
-html/product.html
-```
-
-Các trang HTML trong thư mục này được sử dụng để xây dựng các nội dung riêng biệt của website ngoài trang chính `index.html`.
-
----
-
-### `js/`
-
-Thư mục chứa các tập tin JavaScript dùng để xử lý tương tác trên website.
-
-Ví dụ:
-
-```text
-js/main.js
-js/validation.js
-```
-
-Các tập tin JavaScript có thể dùng để:
-
-- Xử lý sự kiện người dùng
-- Kiểm tra dữ liệu nhập
-- Tạo hiệu ứng tương tác
-- Thao tác với DOM
-- Điều khiển các thành phần động trên website
-
----
-
-### `index.html`
-
-Đây là tập tin trang chủ của website.
-
-Khi bật GitHub Pages, tập tin `index.html` sẽ là trang mặc định được hiển thị đầu tiên khi người dùng truy cập vào website.
-
----
-
-### `README.md`
-
-Tập tin mô tả thông tin tổng quan về dự án, cấu trúc thư mục, cách triển khai và yêu cầu nộp bài.
-
-## 3. Yêu cầu thực hiện dự án
-
-Sinh viên cần xây dựng website kết thúc môn theo đúng yêu cầu của giảng viên. Dự án cần đảm bảo các nội dung cơ bản sau:
-
-- Có cấu trúc thư mục rõ ràng.
-- Có trang chủ `index.html`.
-- Có sử dụng HTML để xây dựng nội dung website.
-- Có sử dụng CSS để định dạng giao diện.
-- Có sử dụng JavaScript để xử lý tương tác nếu đề tài yêu cầu.
-- Các tài nguyên như hình ảnh, tài liệu, biểu tượng cần được lưu trong thư mục `assets/`.
-- Báo cáo kết thúc môn cần thực hiện theo mẫu được cung cấp tại `assets/thesis/template_thesis.dotx`.
-
-## 4. Triển khai website bằng GitHub Pages
-
-Dự án cần được bật GitHub Pages để công bố website trực tuyến.
-
-Sau khi bật GitHub Pages, sinh viên cần kiểm tra website hoạt động đúng trước khi nộp bài.
-
-Liên kết website GitHub Pages thường có dạng:
-
-```text
-https://<ten-tai-khoan-github>.github.io/<ten-repository>/
-```
-
-Ví dụ:
-
-```text
-https://nguyenvana.github.io/final-project/
-```
-
-## 5. Nộp bài trên hệ thống LMS
-
-Sau khi hoàn thành dự án, sinh viên cần thực hiện các bước sau:
-
-1. Đẩy toàn bộ mã nguồn dự án lên GitHub.
-2. Bật GitHub Pages cho repository.
-3. Kiểm tra website hoạt động đúng trên trình duyệt.
-4. Sao chép liên kết website GitHub Pages.
-5. Vào hệ thống LMS.
-6. Dán liên kết website vào mục **"Kết thúc môn"**.
-7. Nộp báo cáo kết thúc môn theo đúng mẫu được cung cấp.
-
-## 6. Nội dung cần nộp
-
-Sinh viên cần nộp đầy đủ các nội dung sau:
-
-- Liên kết website đã triển khai bằng GitHub Pages.
-- Mã nguồn dự án trên GitHub.
-- Báo cáo kết thúc môn theo mẫu `template_thesis.dotx`.
-- Các tài nguyên liên quan nếu có.
-
-## 7. Lưu ý
-
-- Không xóa tập tin `README.md`.
-- Không xóa hoặc thay đổi vị trí mẫu báo cáo trong thư mục `assets/thesis/`.
-- Cần kiểm tra đường dẫn hình ảnh, CSS và JavaScript trước khi nộp bài.
-- Website phải hiển thị được khi truy cập bằng liên kết GitHub Pages.
-- Liên kết website cần được cung cấp vào đúng mục **"Kết thúc môn"** trên hệ thống LMS.
-
-## 8. Thông tin sinh viên
-
-Sinh viên cập nhật thông tin cá nhân tại đây:
-
-```text
 Họ và tên:Thạch Hoàng Sa
 Mã số sinh viên:110124252
 Lớp:DA24TTC
 Tên đề tài:THSPHONE-CỬA HÀNG SMART PHONE ONLINE
-Liên kết GitHub repository:https://github.com/TKW-22526/final-test-web-design-H-Sa24252.git
-Liên kết GitHub Pages:https://tkw-22526.github.io/final-test-web-design-H-sa24252/
-```
+Trường: Đại học Trà Vinh
+Học phần: Thiết kế Web
+
+## Giảng viên hướng dẫn
+
+Ths. Nguyễn Ngọc Đan Thanh
+
+## Giấy phép
+
+Dự án được phát triển với mục đích học tập và nghiên cứu trong học phần Thiết kế Web.
+
